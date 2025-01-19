@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS485 UART Web Interface</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>RS485 UART Web Interface</h1>
+    <div class="container">
+        
+        <!-- Chọn cổng COM -->
+        <label for="port">Chọn cổng COM:</label>
+        <select id="port">
+            {% for port in ports %}
+            <option value="{{ port }}">{{ port }}</option>
+            {% endfor %}
+        </select>
+
+        <!-- Baud rate -->
+        <label for="baudrate">Baud rate:</label>
+        <input type="number" id="baudrate" value="{{ default_baudrate }}" step="1">
+
+        <!-- Nút điều khiển -->
+        <button id="openCloseButton" onclick="togglePort()">Open</button>
+
+        <!-- Phản hồi -->
+        <div id="responseMessage" class="response"></div>
+    </div>
+
+    <form id="uartForm">
+        <label for="address">Nhập địa chỉ:</label>
+        <input type="text" id="address" value="111" required>
+
+        <label for="function_code">Chọn mã hàm:</label>
+        <select id="function_code">
+            <option value="1">Đọc dữ liệu</option>
+            <option value="2">Ghi dữ liệu</option>
+            <option value="3">Kiểm tra trạng thái</option>
+            <option value="4">Khởi động lại</option>
+            <option value="5">Gửi thông báo</option>
+        </select>
+
+        <label for="user_data">Nhập dữ liệu:</label>
+        <input type="text" id="user_data" required>
+
+        <button type="submit">Gửi dữ liệu</button>
+    </form>
+    <h2>Bảng Dữ Liệu Cập Nhật</h2>
+    <table id="receiver-table">
+        <tr>
+            <th class="header-colspan" colspan="6">Dữ liệu nhận</th>
+            <th class="header-colspan" colspan="6">Giải Mã</th>
+        </tr>
+        <tr>
+            <th>Start</th>
+            <th>Address</th>
+            <th>Code</th>
+            <th>Data</th>
+            <th>CRC</th>
+            <th>Stop</th>
+            <th>Thuộc Tính </th>
+            <th>Giá Trị </th>
+        </tr>
+    </table>
+    <h2>Bảng Dữ Liệu Gửi và Nhận</h2>
+    <table id="data-table">
+        <tr>
+            <th class="header-colspan" colspan="6">Dữ liệu gửi</th>
+            <th class="header-colspan" colspan="6">Dữ liệu nhận</th>
+        </tr>
+        <tr>
+            <th>Start</th>
+            <th>Address</th>
+            <th>Code</th>
+            <th>Data</th>
+            <th>CRC</th>
+            <th>Stop</th>
+            <th>Start</th>
+            <th>Address</th>
+            <th>Code</th>
+            <th>Data</th>
+            <th>CRC</th>
+            <th>Stop</th>
+        </tr>
+    </table>
+    <script>
+        let isPortOpen = false;
+
+        function togglePort() {
+            const port = document.getElementById("port").value;
+            const baudrate = document.getElementById("baudrate").value;
+            const button = document.getElementById("openCloseButton");
+            const responseMessage = document.getElementById("responseMessage");
+
+            if (!isPortOpen) {
+                // Mở cổng
+                fetch("/open_port", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ port, baudrate })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    responseMessage.style.display = "block";
+                    if (data.status === "success") {
+                        responseMessage.textContent = data.message;
+                        responseMessage.className = "response success";
+                        button.textContent = "Close";
+                        isPortOpen = true;
+                    } else {
+                        responseMessage.textContent = data.message;
+                        responseMessage.className = "response error";
+                    }
+                });
+            } else {
+                // Đóng cổng
+                fetch("/close_port", { method: "POST" })
+                .then(response => response.json())
+                .then(data => {
+                    responseMessage.style.display = "block";
+                    if (data.status === "success") {
+                        responseMessage.textContent = data.message;
+                        responseMessage.className = "response success";
+                        button.textContent = "Open";
+                        isPortOpen = false;
+                    } else {
+                        responseMessage.textContent = data.message;
+                        responseMessage.className = "response error";
+                    }
+                });
+            }
+        }
+    </script>
+
+    <script>
+function addRowToLogTable(data) {
+    const table = document.getElementById("data-table");
+
+    // Nếu data không phải là mảng, chuyển thành mảng
+    const dataArray = Array.isArray(data) ? data : [data];
+
+    // Lặp qua từng phần tử trong mảng
+    dataArray.forEach(entry => {
+        const send = entry.send;
+        const receiver = entry.receiver;
+
+        // Tạo một hàng mới trong bảng
+        const newRow = table.insertRow();
+
+        // Thêm ô cho "Dữ liệu gửi"
+        newRow.insertCell().textContent = send.start;
+        newRow.insertCell().textContent = send.addr;
+        newRow.insertCell().textContent = send.code;
+        newRow.insertCell().textContent = send.data;
+        newRow.insertCell().textContent = send.crc;
+        newRow.insertCell().textContent = send.stop;
+
+        // Thêm ô cho "Dữ liệu nhận"
+        newRow.insertCell().textContent = receiver.start;
+        newRow.insertCell().textContent = receiver.addr;
+        newRow.insertCell().textContent = receiver.code;
+        newRow.insertCell().textContent = receiver.data;
+        newRow.insertCell().textContent = receiver.crc;
+        newRow.insertCell().textContent = receiver.stop;
+    });
+}
+
+function addRowToDecodeTable(data) {
+    const table = document.getElementById("receiver-table");
+
+    // Nếu data không phải là mảng, chuyển thành mảng
+    const dataArray = Array.isArray(data) ? data : [data];
+
+    // Lặp qua từng phần tử trong mảng
+    dataArray.forEach(entry => {
+        const send = entry.send;
+        const receiver = entry.receiver;
+
+        // Tạo một hàng mới trong bảng
+        const newRow = table.insertRow();
+
+        // Thêm ô cho "Dữ liệu gửi"
+        newRow.insertCell().textContent = receiver.start;
+        newRow.insertCell().textContent = receiver.addr;
+        newRow.insertCell().textContent = receiver.code;
+        newRow.insertCell().textContent = receiver.data;
+        newRow.insertCell().textContent = receiver.crc;
+        newRow.insertCell().textContent = receiver.stop;
+
+        // Thêm ô cho "Dữ liệu nhận"
+        newRow.insertCell().textContent = receiver.key;
+        newRow.insertCell().textContent = receiver.value;
+        // newRow.insertCell().textContent = receiver.code;
+        // newRow.insertCell().textContent = receiver.data;
+        // newRow.insertCell().textContent = receiver.crc;
+        // newRow.insertCell().textContent = receiver.stop;
+    });
+}
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            // Gửi dữ liệu
+            $('#uartForm').on('submit', function (e) {
+                e.preventDefault();
+
+                var function_code = $('#function_code').val();
+                var user_data = $('#user_data').val();
+                var address = $('#address').val();
+
+                $.ajax({
+                    url: '/send',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({address: address, function_code: function_code, user_data: user_data }),
+                    success: function (response) {
+                        $('#responseMessage').text(response.message);
+                        if (response.status === 'success') {
+                            $('#frameSent').text('Dữ liệu gửi: ' + response.frame_sent);
+                        } else {
+                            $('#frameSent').text('');
+                        }
+                    },
+                    error: function (error) {
+                        $('#responseMessage').text('Lỗi: ' + error.responseText);
+                        $('#frameSent').text('');
+                    }
+                });
+                setTimeout(fetchReceivedData, 500);
+            });
+
+            // Nhận dữ liệu
+            function fetchReceivedData() {
+                $.ajax({
+                    url: '/receive',
+                    type: 'GET',
+                    success: function (response) {
+                        if (response.length > 0) {
+                            response.map(function(data) {
+                                    
+                                    addRowToLogTable(data);
+                                    addRowToDecodeTable(data);
+                                });
+                            } else {
+                            console.log("Chưa nhận dữ liệu");
+                            // $('#receivedData').html('<p>Chưa nhận dữ liệu.</p>');
+                            // setTimeout(fetchReceivedData, 1000);
+                        }
+                    },
+                    error: function (error) {
+                        console.log("Lỗi khi nhận dữ liệu");
+                        // $('#receivedData').html('<p>Lỗi khi nhận dữ liệu.</p>');
+                    }
+                });
+            }
+            function fetchUpdateData() {
+                $.ajax({
+                    url: '/update',
+                    type: 'GET',
+                    success: function (response) {
+                        if (response.length > 0) {
+                            response.map(function(data) {
+                                    console.log(data);
+                                    // addRowToLogTable(data);
+                                    addRowToDecodeTable(data);
+                                });
+                            } else {
+                            console.log("Chưa nhận dữ liệu");
+                            // $('#receivedData').html('<p>Chưa nhận dữ liệu.</p>');
+                            // setTimeout(fetchReceivedData, 1000);
+                        }
+                    },
+                    error: function (error) {
+                        console.log("Lỗi khi nhận dữ liệu");
+                        // $('#receivedData').html('<p>Lỗi khi nhận dữ liệu.</p>');
+                    }
+                });
+            }
+
+            // // Cập nhật dữ liệu nhận được mỗi giây
+            setInterval(fetchUpdateData, 1000);
+            setInterval(fetchReceivedData, 1000);
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Gộp đường kẻ */
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #333; /* Đường kẻ bao quanh ô */
+            text-align: center; /* Căn giữa nội dung */
+            padding: 10px; /* Khoảng cách giữa nội dung và viền */
+        }
+        th {
+            background-color: #f4f4f4; /* Màu nền cho tiêu đề */
+        }
+        .header-colspan {
+            background-color: #d9edf7; /* Màu nền tiêu đề nhóm */
+            font-weight: bold;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Khoảng cách giữa các phần tử */
+            flex-wrap: wrap;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+            margin-right: 5px;
+        }
+
+        input[type="text"], select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+    #receivedData {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .form-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .form-container select,
+        .form-container button {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+        .form-container label {
+            margin-right: 5px;
+        }
+
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        .response-message {
+            margin-top: 20px;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+
+</body>
+</html>
