@@ -1,7 +1,0 @@
-../Core/Src/MPR121.c:4:9:MPR121_Init	2
-../Core/Src/MPR121.c:55:6:writeRegister	1
-../Core/Src/MPR121.c:66:9:readRegister8	1
-../Core/Src/MPR121.c:74:10:readRegister16	1
-../Core/Src/MPR121.c:84:6:setThresholds	2
-../Core/Src/MPR121.c:92:10:filteredData	2
-../Core/Src/MPR121.c:98:10:touched	1
