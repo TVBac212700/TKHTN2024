@@ -1,4 +1,4 @@
-Core/Src/MPR121.o: ../Core/Src/MPR121.c ../Core/Src/MPR121.h \
+Core/Src/MPR121.o: ../Core/Src/MPR121.c ../Core/Inc/MPR121.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -23,7 +23,7 @@ Core/Src/MPR121.o: ../Core/Src/MPR121.c ../Core/Src/MPR121.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-../Core/Src/MPR121.h:
+../Core/Inc/MPR121.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:

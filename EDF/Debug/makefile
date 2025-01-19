@@ -60,8 +60,8 @@ all: main-build
 main-build: EDF.elf secondary-outputs
 
 # Tool invocations
-EDF.elf EDF.map: $(OBJS) $(USER_OBJS) D:\File\Project\DES2024\CodeSTM\EDF\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "EDF.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\File\Project\DES2024\CodeSTM\EDF\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EDF.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+EDF.elf EDF.map: $(OBJS) $(USER_OBJS) D:\File\Project\TKHTN2024\EDF\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "EDF.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\EDF\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EDF.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
