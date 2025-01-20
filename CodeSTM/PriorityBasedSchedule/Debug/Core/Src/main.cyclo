@@ -15,9 +15,9 @@
 ../Core/Src/main.c:166:6:TaskRX	9
 ../Core/Src/main.c:227:6:TaskTX	5
 ../Core/Src/main.c:261:5:main	1
-../Core/Src/main.c:323:6:SystemClock_Config	3
-../Core/Src/main.c:363:13:MX_I2C1_Init	2
-../Core/Src/main.c:397:13:MX_USART1_UART_Init	2
-../Core/Src/main.c:430:13:MX_GPIO_Init	1
-../Core/Src/main.c:467:6:HAL_GPIO_EXTI_Callback	2
-../Core/Src/main.c:483:6:Error_Handler	1
+../Core/Src/main.c:322:6:SystemClock_Config	3
+../Core/Src/main.c:362:13:MX_I2C1_Init	2
+../Core/Src/main.c:396:13:MX_USART1_UART_Init	2
+../Core/Src/main.c:429:13:MX_GPIO_Init	1
+../Core/Src/main.c:466:6:HAL_GPIO_EXTI_Callback	2
+../Core/Src/main.c:482:6:Error_Handler	1

@@ -60,8 +60,8 @@ all: main-build
 main-build: MeasureTimeTask.elf secondary-outputs
 
 # Tool invocations
-MeasureTimeTask.elf MeasureTimeTask.map: $(OBJS) $(USER_OBJS) D:\File\Project\DES2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\File\Project\DES2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+MeasureTimeTask.elf MeasureTimeTask.map: $(OBJS) $(USER_OBJS) D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

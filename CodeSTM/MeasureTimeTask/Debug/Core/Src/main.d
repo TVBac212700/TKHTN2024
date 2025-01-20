@@ -23,8 +23,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Src/liquidcrystal_i2c.h ../Core/Src/MPR121.h \
- ../Core/Src/bmp180_for_stm32_hal.h ../Core/Src/funtion.h
+ ../Core/Inc/liquidcrystal_i2c.h ../Core/Inc/MPR121.h \
+ ../Core/Inc/bmp180_for_stm32_hal.h ../Core/Inc/main.h \
+ ../Core/Inc/funtion.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -50,7 +51,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
-../Core/Src/liquidcrystal_i2c.h:
-../Core/Src/MPR121.h:
-../Core/Src/bmp180_for_stm32_hal.h:
-../Core/Src/funtion.h:
+../Core/Inc/liquidcrystal_i2c.h:
+../Core/Inc/MPR121.h:
+../Core/Inc/bmp180_for_stm32_hal.h:
+../Core/Inc/main.h:
+../Core/Inc/funtion.h:
