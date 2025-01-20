@@ -96,3 +96,6 @@ java.lang.Exception: The project description file (.project) for 'RoundRobin' is
 	at org.eclipse.ui.actions.OpenResourceAction$1.runInWorkspace(OpenResourceAction.java:279)
 	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-01-20 16:01:54.125
+!MESSAGE Indexed 'RoundRobin' (22 sources, 116 headers) in 8.81 sec: 9,558 declarations; 43,334 references; 7 unresolved inclusions; 862 syntax errors; 1,304 unresolved names (2.4%)
