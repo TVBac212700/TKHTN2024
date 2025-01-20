@@ -38,20 +38,6 @@ uint8_t MPR121_Init(void) {
     return c; 
 }
 
-
-// uint8_t MPR121_IsTouched(void) {
-//     uint8_t touchStatus[2] = {0};
-
-    
-//     if (HAL_I2C_Mem_Read(&hi2c1, MPR121_I2C_ADDR, MPR121_TOUCH_STATUS_L, I2C_MEMADD_SIZE_8BIT, touchStatus, 2, HAL_MAX_DELAY) != HAL_OK) {
-//         return 0; 
-//     }
-
-    
-//     uint16_t touchData = (touchStatus[1] << 8) | touchStatus[0];
-//     return (touchData != 0) ? 1 : 0;
-// }
-
 void writeRegister(uint8_t reg, uint8_t cmd) {
 	// uint8_t arr[2] = { reg, cmd };
 	// HAL_I2C_Master_Transmit(&hi2c1, MPR121_I2C_ADDR, arr, 2, HAL_MAX_DELAY);

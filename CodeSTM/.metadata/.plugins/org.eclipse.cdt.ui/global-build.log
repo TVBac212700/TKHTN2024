@@ -1,47 +1,671 @@
-00:57:14 **** Clean-only build of configuration Debug for project EDF ****
-make -j8 clean 
-rm -rf ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.su
-rm -rf ./Core/Startup/startup_stm32f103c8tx.d ./Core/Startup/startup_stm32f103c8tx.o
-rm -rf ./Core/Src/MPR121.cyclo ./Core/Src/MPR121.d ./Core/Src/MPR121.o ./Core/Src/MPR121.su ./Core/Src/bmp180_for_stm32_hal.cyclo ./Core/Src/bmp180_for_stm32_hal.d ./Core/Src/bmp180_for_stm32_hal.o ./Core/Src/bmp180_for_stm32_hal.su ./Core/Src/liquidcrystal_i2c.cyclo ./Core/Src/liquidcrystal_i2c.d ./Core/Src/liquidcrystal_i2c.o ./Core/Src/liquidcrystal_i2c.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32f1xx_hal_msp.cyclo ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_hal_msp.su ./Core/Src/stm32f1xx_it.cyclo ./Core/Src/stm32f1xx_it.d ./Core/Src/stm32f1xx_it.o ./Core/Src/stm32f1xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f1xx.cyclo ./Core/Src/system_stm32f1xx.d ./Core/Src/system_stm32f1xx.o ./Core/Src/system_stm32f1xx.su
-rm -rf EDF.elf EDF.list EDF.map default.size.stdout
- 
-00:57:15 **** Build of configuration Debug for project EDF ****
-make -j8 all 
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
-arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f103c8tx.d" -MT"Core/Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f103c8tx.o" "../Core/Startup/startup_stm32f103c8tx.s"
-arm-none-eabi-gcc "../Core/Src/MPR121.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPR121.d" -MT"Core/Src/MPR121.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/MPR121.o"
-arm-none-eabi-gcc "../Core/Src/bmp180_for_stm32_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/bmp180_for_stm32_hal.d" -MT"Core/Src/bmp180_for_stm32_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/bmp180_for_stm32_hal.o"
-arm-none-eabi-gcc "../Core/Src/liquidcrystal_i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/liquidcrystal_i2c.d" -MT"Core/Src/liquidcrystal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/liquidcrystal_i2c.o"
+13:46:36 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
-arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:125:16: warning: unused variable 'tx' [-Wunused-variable]
-  125 |           char tx[100] = "1";
-      |                ^~
-arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
-arm-none-eabi-gcc -o "EDF.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\EDF\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EDF.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: EDF.elf
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
  
-arm-none-eabi-size  EDF.elf 
-arm-none-eabi-objdump -h -S EDF.elf  > "EDF.list"
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
    text	   data	    bss	    dec	    hex	filename
-  17128	    108	   2092	  19328	   4b80	EDF.elf
+  32272	    536	   2224	  35032	   88d8	RoundRobin.elf
 Finished building: default.size.stdout
  
-Finished building: EDF.list
+Finished building: RoundRobin.list
+ 
+13:47:05 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  32272	    536	   2224	  35032	   88d8	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+13:48:21 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  32256	    536	   2224	  35016	   88c8	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+13:49:42 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  32264	    536	   2224	  35024	   88d0	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+13:50:19 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  32272	    536	   2224	  35032	   88d8	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+13:58:00 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'TaskRX':
+../Core/Src/main.c:177:43: error: 'tx_buff' undeclared (first use in this function)
+  177 |                                   sprintf(tx_buff, "%dPa", (int) pressure);
+      |                                           ^~~~~~~
+../Core/Src/main.c:177:43: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:58:12 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'TaskRX':
+../Core/Src/main.c:195:35: error: 'tx_buff' undeclared (first use in this function)
+  195 |                           sprintf(tx_buff, "Okee");
+      |                                   ^~~~~~~
+../Core/Src/main.c:195:35: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:58:25 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  33968	    536	   2272	  36776	   8fa8	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:00:11 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34328	    536	   2272	  37136	   9110	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:02:47 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34336	    536	   2272	  37144	   9118	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:06:41 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34336	    536	   2272	  37144	   9118	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:08:11 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34336	    536	   2272	  37144	   9118	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:10:25 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34328	    536	   2272	  37136	   9110	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:15:31 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34328	    536	   2272	  37136	   9110	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:16:49 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34328	    536	   2272	  37136	   9110	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:18:30 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34360	    536	   2272	  37168	   9130	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:20:50 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34432	    536	   2272	  37240	   9178	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:23:53 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34432	    536	   2272	  37240	   9178	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:25:26 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34432	    536	   2272	  37240	   9178	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:26:51 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34432	    536	   2272	  37240	   9178	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:30:45 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34448	    536	   2272	  37256	   9188	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:39:32 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34464	    536	   2272	  37272	   9198	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:41:46 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34456	    536	   2272	  37264	   9190	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:44:56 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  35048	    536	   2272	  37856	   93e0	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:48:19 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  35064	    536	   2272	  37872	   93f0	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:48:46 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'TaskLCD':
+../Core/Src/main.c:145:56: warning: '%d' directive writing between 1 and 5 bytes into a region of size between 0 and 10 [-Wformat-overflow=]
+  145 |                 sprintf(print_lcd_row1, "%0.1f\t %dKPa %d", temperature, (int)pressure/1000, (int)count_touch);
+      |                                                        ^~
+../Core/Src/main.c:145:41: note: directive argument in the range [0, 65535]
+  145 |                 sprintf(print_lcd_row1, "%0.1f\t %dKPa %d", temperature, (int)pressure/1000, (int)count_touch);
+      |                                         ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:145:17: note: 'sprintf' output between 12 and 332 bytes into a destination of size 20
+  145 |                 sprintf(print_lcd_row1, "%0.1f\t %dKPa %d", temperature, (int)pressure/1000, (int)count_touch);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34496	    536	   2272	  37304	   91b8	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:50:22 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'TaskLCD':
+../Core/Src/main.c:145:56: warning: '%d' directive writing between 1 and 5 bytes into a region of size between 0 and 10 [-Wformat-overflow=]
+  145 |                 sprintf(print_lcd_row1, "%0.1f\t %dKPa %d", temperature, (int)pressure/1000, (int)count_touch);
+      |                                                        ^~
+../Core/Src/main.c:145:41: note: directive argument in the range [0, 65535]
+  145 |                 sprintf(print_lcd_row1, "%0.1f\t %dKPa %d", temperature, (int)pressure/1000, (int)count_touch);
+      |                                         ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:145:17: note: 'sprintf' output between 12 and 332 bytes into a destination of size 20
+  145 |                 sprintf(print_lcd_row1, "%0.1f\t %dKPa %d", temperature, (int)pressure/1000, (int)count_touch);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34504	    536	   2272	  37312	   91c0	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:52:06 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34504	    536	   2296	  37336	   91d8	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+14:57:32 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34592	    584	   2296	  37472	   9260	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:01:29 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34592	    584	   2296	  37472	   9260	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:03:33 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34688	    596	   2300	  37584	   92d0	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:06:53 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34768	    596	   2300	  37664	   9320	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:08:50 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'TaskTX':
+../Core/Src/main.c:239:47: error: 'result' undeclared (first use in this function)
+  239 |                   gen_data_send_rs485(UPGRADE(result.Data[0] - '0'),send_to_rs485);
+      |                                               ^~~~~~
+../Core/Src/main.c:44:24: note: in definition of macro 'UPGRADE'
+   44 | #define UPGRADE(Code) (Code+127)
+      |                        ^~~~
+../Core/Src/main.c:239:47: note: each undeclared identifier is reported only once for each function it appears in
+  239 |                   gen_data_send_rs485(UPGRADE(result.Data[0] - '0'),send_to_rs485);
+      |                                               ^~~~~~
+../Core/Src/main.c:44:24: note: in definition of macro 'UPGRADE'
+   44 | #define UPGRADE(Code) (Code+127)
+      |                        ^~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:09:02 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34832	    596	   2300	  37728	   9360	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:10:27 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34760	    596	   2300	  37656	   9318	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:11:16 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34832	    596	   2300	  37728	   9360	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:12:37 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34840	    596	   2300	  37736	   9368	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:14:01 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34856	    596	   2300	  37752	   9378	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:15:05 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34872	    596	   2300	  37768	   9388	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:16:57 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34880	    596	   2300	  37776	   9390	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:18:03 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34864	    596	   2300	  37760	   9380	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:20:39 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34688	    596	   2300	  37584	   92d0	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:21:23 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34872	    596	   2300	  37768	   9388	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:48:38 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34824	    596	   2300	  37720	   9358	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:49:14 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34824	    596	   2300	  37720	   9358	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
+ 
+15:51:53 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:34:
+../Core/Inc/funtion.h: In function 'gen_data_send_rs485':
+../Core/Inc/funtion.h:213:23: error: 'MY_ADDRESS' undeclared (first use in this function)
+  213 |         result.Addr = MY_ADDRESS;
+      |                       ^~~~~~~~~~
+../Core/Inc/funtion.h:213:23: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:52:22 **** Incremental Build of configuration Debug for project RoundRobin ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RoundRobin.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RoundRobin.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RoundRobin.elf
+ 
+arm-none-eabi-size  RoundRobin.elf 
+arm-none-eabi-objdump -h -S RoundRobin.elf  > "RoundRobin.list"
+   text	   data	    bss	    dec	    hex	filename
+  34832	    596	   2300	  37728	   9360	RoundRobin.elf
+Finished building: default.size.stdout
+ 
+Finished building: RoundRobin.list
  
