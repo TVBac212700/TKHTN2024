@@ -145,10 +145,10 @@ function addRowToLogTable(data) {
     dataArray.forEach(entry => {
         const send = entry.send;
         const receiver = entry.receiver;
-
+        
         // Tạo một hàng mới trong bảng
         const newRow = table.insertRow();
-
+        newRow.style.backgroundColor = '#fffff0'
         // Thêm ô cho "Dữ liệu gửi"
         newRow.insertCell().textContent = send.start;
         newRow.insertCell().textContent = send.addr;
@@ -156,7 +156,7 @@ function addRowToLogTable(data) {
         newRow.insertCell().textContent = send.data;
         newRow.insertCell().textContent = send.crc;
         newRow.insertCell().textContent = send.stop;
-
+        
         // Thêm ô cho "Dữ liệu nhận"
         newRow.insertCell().textContent = receiver.start;
         newRow.insertCell().textContent = receiver.addr;
@@ -169,26 +169,34 @@ function addRowToLogTable(data) {
 
 function addRowToDecodeTable(data) {
     const table = document.getElementById("receiver-table");
-
+    
     // Nếu data không phải là mảng, chuyển thành mảng
     const dataArray = Array.isArray(data) ? data : [data];
-
+    
     // Lặp qua từng phần tử trong mảng
     dataArray.forEach(entry => {
         const send = entry.send;
         const receiver = entry.receiver;
-
+        
         // Tạo một hàng mới trong bảng
         const newRow = table.insertRow();
-
+        
         // Thêm ô cho "Dữ liệu gửi"
+        if(receiver.exac != true)
+    {
+        newRow.style.backgroundColor = '#ffcccc'
+    }
+    else
+    {
+        newRow.style.backgroundColor = '#fffff0'
+    }
         newRow.insertCell().textContent = receiver.start;
         newRow.insertCell().textContent = receiver.addr;
         newRow.insertCell().textContent = receiver.code;
         newRow.insertCell().textContent = receiver.data;
         newRow.insertCell().textContent = receiver.crc;
         newRow.insertCell().textContent = receiver.stop;
-
+        
         // Thêm ô cho "Dữ liệu nhận"
         newRow.insertCell().textContent = receiver.key;
         newRow.insertCell().textContent = receiver.value;

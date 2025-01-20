@@ -46,7 +46,7 @@ void parse_data(const char *input, DataStruct *data) {
     data->Len = dataIndex - 4; // Lưu chiều dài của Data
 
     // Chuyển đổi CRC
-    strncpy(temp, input + inputIndex - 4, 4);
+    strncpy(temp, input + inputIndex - 8, 4);
     temp[4] = '\0';
     data->Crc = (uint16_t)strtol(temp, NULL, 16);
 

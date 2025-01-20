@@ -67,6 +67,7 @@ char indicate_T[] = "Send Temperature";
 char indicate_P[] = "Send Pressure";
 char indicate_C[] = "Send Count";
 char indicate_M[] = "Send Status";
+char indicate_E[] = "CRC Error";
 char key_board[20];
 float temperature;
 int32_t pressure;
@@ -171,7 +172,7 @@ void TaskRX()
 	  {
 		  DataStruct result;
 		  parse_data(read_to_rs485,&result);
-		  if(result.Addr == MY_ADDRESS)
+		  if(result.Addr == MY_ADDRESS && check_crc(&result) == result.Crc)
 		  {
 			  if(result.Code == 1)
 			  {
@@ -220,6 +221,15 @@ void TaskRX()
 				  sprintf(send_to_rs485, "Okee");
 				  gen_data_send_rs485(RESPONSES(CODE_RESP),send_to_rs485);
 			  }
+		  }
+		  else if(check_crc(&result) != result.Crc)
+		  {
+			  result.Data[result.Len] = '\0';
+			  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+			  memcpy((void*)print_lcd_row2, (void*)indicate_E, sizeof(indicate_E));
+			  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+			  sprintf(send_to_rs485, "Error Crc");
+			  gen_data_send_rs485(RESPONSES(CODE_RESP),send_to_rs485);
 		  }
 	  }
 }

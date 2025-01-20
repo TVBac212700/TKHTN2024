@@ -1,10 +1,10 @@
-17:06:08 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
+20:38:18 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
 make -j12 all 
 arm-none-eabi-size  PriorityBasedSchedule.elf 
    text	   data	    bss	    dec	    hex	filename
-  34848	    596	   2300	  37744	   9370	PriorityBasedSchedule.elf
+  35016	    608	   2296	  37920	   9420	PriorityBasedSchedule.elf
 Finished building: default.size.stdout
  
 
-17:06:08 Build Finished. 0 errors, 0 warnings. (took 207ms)
+20:38:19 Build Finished. 0 errors, 0 warnings. (took 206ms)
 

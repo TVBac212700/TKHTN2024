@@ -314,8 +314,8 @@ int main(void)
 	  unsigned long t2 = DWT->CYCCNT;
 	  TaskTX();
 	  unsigned long diff = (t2 - t1)/72;
-	  sprintf(send_to_rs485, "%d\n", (int) diff);
-	  HAL_UART_Transmit(&huart1, (uint8_t *)&send_to_rs485, strlen(send_to_rs485) , 1000);
+//	  sprintf(send_to_rs485, "%d\n", (int) diff);
+//	  HAL_UART_Transmit(&huart1, (uint8_t *)&send_to_rs485, strlen(send_to_rs485) , 1000);
   }
   /* USER CODE END 3 */
 }
