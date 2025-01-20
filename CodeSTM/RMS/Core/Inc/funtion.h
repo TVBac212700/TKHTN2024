@@ -8,7 +8,7 @@
 #ifndef SRC_FUNTION_H_
 #define SRC_FUNTION_H_
 #define MAX_DATA_SIZE 256
-#define MY_ADDRESS 111
+
 typedef struct {
     uint8_t Start;     // Ký tự Start (dấu ':' đầu tiên)
     uint8_t Addr;      // Địa chỉ (Addr)
@@ -46,7 +46,7 @@ void parse_data(const char *input, DataStruct *data) {
     data->Len = dataIndex - 4; // Lưu chiều dài của Data
 
     // Chuyển đổi CRC
-    strncpy(temp, input + inputIndex - 4, 4);
+    strncpy(temp, input + inputIndex - 8, 4);
     temp[4] = '\0';
     data->Crc = (uint16_t)strtol(temp, NULL, 16);
 
@@ -209,6 +209,8 @@ char convert_to_char(uint16_t num) {
 char* gen_data_send_rs485(uint8_t code, char data[])
 {
 	DataStruct result;
+	memset((void*)&result,0,sizeof(result));
+	result.Start = 0x3A;
 	result.Addr = MY_ADDRESS;
 	result.Code = code;
 	result.Len = strlen(data);

@@ -953,3 +953,1046 @@
 2025-01-20 12:20:02,209 [INFO] ProjectBuilder:5154 - Time for Generating toolchain IDE Files: 2071mS.
 2025-01-20 12:20:02,210 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 1mS.
 2025-01-20 12:20:02,214 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 0mS.
+2025-01-20 18:07:00,711 [INFO] WebApp:190 - Connection lost
+2025-01-20 18:09:10,482 [INFO] WebApp:187 - Connection restablished
+2025-01-20 18:56:47,273 [INFO] WebApp:190 - Connection lost
+2025-01-20 18:56:49,590 [INFO] WebApp:187 - Connection restablished
+2025-01-20 19:07:58,445 [INFO] WebApp:190 - Connection lost
+2025-01-20 19:07:58,651 [INFO] WebApp:187 - Connection restablished
+2025-01-20 20:52:24,871 [INFO] WebApp:190 - Connection lost
+2025-01-20 20:52:28,975 [INFO] WebApp:187 - Connection restablished
+2025-01-20 20:52:35,352 [INFO] WebApp:190 - Connection lost
+2025-01-20 20:52:35,509 [INFO] WebApp:187 - Connection restablished
+2025-01-20 20:54:20,919 [INFO] WebApp:190 - Connection lost
+2025-01-20 20:54:21,456 [INFO] WebApp:187 - Connection restablished
+2025-01-20 22:00:55,703 [INFO] MainUpdater:2872 - connection check result : 10
+2025-01-20 22:00:55,751 [INFO] MainUpdater:2872 - connection check result : 10
+2025-01-20 22:00:56,127 [INFO] MicroXplorer:468 - Change Database Path : 
+2025-01-20 22:00:56,128 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.130
+2025-01-20 22:00:56,425 [ERROR] ProjectManagerView:394 - 
+java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()" because the return value of "java.util.List.get(int)" is null
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab$9.caretUpdate(ProjectChoiceTab.java:2616) ~[filemanager.jar:?]
+	at javax.swing.text.JTextComponent.fireCaretUpdate(JTextComponent.java:408) ~[?:?]
+	at javax.swing.text.JTextComponent$MutableCaretEvent.fire(JTextComponent.java:4484) ~[?:?]
+	at javax.swing.text.JTextComponent$MutableCaretEvent.stateChanged(JTextComponent.java:4506) ~[?:?]
+	at javax.swing.text.DefaultCaret.fireStateChanged(DefaultCaret.java:857) ~[?:?]
+	at javax.swing.text.DefaultCaret.changeCaretPosition(DefaultCaret.java:1343) ~[?:?]
+	at javax.swing.text.DefaultCaret.handleSetDot(DefaultCaret.java:1242) ~[?:?]
+	at javax.swing.text.DefaultCaret.setDot(DefaultCaret.java:1223) ~[?:?]
+	at javax.swing.text.DefaultCaret$Handler.insertUpdate(DefaultCaret.java:1819) ~[?:?]
+	at javax.swing.text.AbstractDocument.fireInsertUpdate(AbstractDocument.java:227) ~[?:?]
+	at javax.swing.text.AbstractDocument.handleInsertString(AbstractDocument.java:781) ~[?:?]
+	at javax.swing.text.AbstractDocument.insertString(AbstractDocument.java:740) ~[?:?]
+	at javax.swing.text.PlainDocument.insertString(PlainDocument.java:131) ~[?:?]
+	at javax.swing.text.AbstractDocument.replace(AbstractDocument.java:699) ~[?:?]
+	at javax.swing.text.JTextComponent.setText(JTextComponent.java:1725) ~[?:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.createHeapStackFields(ProjectChoiceTab.java:975) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.buildLinkSettingsPanel(ProjectChoiceTab.java:3666) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.defineWindowsFields(ProjectChoiceTab.java:1934) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.updateSettings(ProjectChoiceTab.java:553) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectSettingsPanel.UpdateDialog(ProjectSettingsPanel.java:245) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.ProjectManagerView.propertyChange(ProjectManagerView.java:391) ~[filemanager.jar:?]
+	at java.beans.PropertyChangeSupport.fire(PropertyChangeSupport.java:343) ~[?:?]
+	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:335) ~[?:?]
+	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:268) ~[?:?]
+	at com.st.microxplorer.util.MXPropertyChangeSupport.firePropertyChange(MXPropertyChangeSupport.java:54) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.mxsystem.MxSystem.closeConfig(MxSystem.java:899) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.maingui.MainPanel.closeConfig(MainPanel.java:789) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.OpenFileManager.loadConfigurationFile(OpenFileManager.java:265) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:340) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:318) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.FileManagerView.getSpecificTask(FileManagerView.java:246) ~[filemanager.jar:?]
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor.getMxTabbedPaneInstance(CubeMxEditor.java:1198) ~[com.st.stm32cube.common.mx_6.13.0.202411220809/:?]
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor$12$1.createSwingComponent(CubeMxEditor.java:1068) ~[com.st.stm32cube.common.mx_6.13.0.202411220809/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite.doComponentCreation(EmbeddedSwingComposite.java:492) ~[com.st.stm32cube.common.mx.oss_6.13.0.202411220809/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite$4.run(EmbeddedSwingComposite.java:291) ~[com.st.stm32cube.common.mx.oss_6.13.0.202411220809/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.AwtEnvironment$2.run(AwtEnvironment.java:166) ~[com.st.stm32cube.common.mx.oss_6.13.0.202411220809/:?]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:400) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+2025-01-20 22:00:56,544 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
+2025-01-20 22:00:56,544 [INFO] ThirdParty:873 - entering critical section [close project]
+2025-01-20 22:00:56,545 [INFO] ThirdParty:883 - exiting critical section [close project]
+2025-01-20 22:00:56,569 [INFO] PinOutPanel:1589 - setPackage(No Configuration,No Configuration)
+2025-01-20 22:00:56,739 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 415685480 Bytes (602931200)
+2025-01-20 22:00:56,744 [INFO] MicroXplorer:468 - Change Database Path : 
+2025-01-20 22:00:56,744 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.130
+2025-01-20 22:00:56,745 [INFO] OpenFileManager:332 - Change cursor
+2025-01-20 22:00:56,855 [INFO] RulesReader:64 - Compatibility file has been processed (297 Rules)
+2025-01-20 22:00:56,905 [INFO] Mcu:2035 - Initializing MCU STM32F103C(8-B)Tx STM32F103C8Tx STM32F103C8T6
+2025-01-20 22:00:58,370 [INFO] Context:748 - Trying to add GPIOservice into a context  which must be forbidden
+2025-01-20 22:01:00,025 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2025-01-20 22:01:00,026 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2025-01-20 22:01:00,026 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2025-01-20 22:01:00,026 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2025-01-20 22:01:00,027 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2025-01-20 22:01:00,044 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,045 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,045 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,045 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,045 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,045 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,045 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,045 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,046 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,046 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,046 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,046 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,047 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,047 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,047 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,047 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,047 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,047 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,047 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,047 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,047 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,048 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,048 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,048 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,048 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,048 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,049 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,049 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,049 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,049 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,050 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,050 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,050 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,050 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,050 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-01-20 22:01:00,050 [WARN] ModelPack:524 - Component already loaded: STMicroelectronics:HAL Drivers:0.0.0:STMicroelectronics:Device:STMicro_Driver:XSPI:HAL::0.0.1:HAL_XSPI
+2025-01-20 22:01:00,202 [INFO] ThirdPartyModel:298 - Start build external matchings
+2025-01-20 22:01:00,957 [INFO] ThirdPartyModel:316 - End build external matchings
+2025-01-20 22:01:01,006 [INFO] ImportTextPane:218 - (OptionalMessage_ERROR) IP (RCC) : Parameter (ADCFreqValue) has invalid value (36000000)
+2025-01-20 22:01:01,007 [INFO] ImportTextPane:218 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2025-01-20 22:01:01,007 [INFO] ImportTextPane:218 - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCOFreq_Value) has invalid value (72000000)
+2025-01-20 22:01:01,008 [INFO] ImportTextPane:218 - (OptionalMessage_ERROR) IP (RCC) : Parameter (USBFreq_Value) has invalid value (72000000)
+2025-01-20 22:01:01,585 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 251690704 Bytes (643825664)
+2025-01-20 22:01:01,668 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
+2025-01-20 22:01:01,669 [INFO] ThirdParty:835 - entering critical section [change project]
+2025-01-20 22:01:01,669 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2025-01-20 22:01:01,670 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.3.0
+2025-01-20 22:01:01,670 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC9 1.0.0
+2025-01-20 22:01:01,670 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2025-01-20 22:01:01,670 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.4.0
+2025-01-20 22:01:01,670 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2025-01-20 22:01:01,670 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2025-01-20 22:01:01,671 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.1
+2025-01-20 22:01:01,671 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2025-01-20 22:01:01,671 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-WB05N 1.1.0
+2025-01-20 22:01:01,671 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2025-01-20 22:01:01,671 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TCPP 4.1.0
+2025-01-20 22:01:01,671 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 2.1.0
+2025-01-20 22:01:01,671 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.2.0
+2025-01-20 22:01:01,672 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-IPS 3.0.0
+2025-01-20 22:01:01,672 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 2.0.0
+2025-01-20 22:01:01,672 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 7.0.0
+2025-01-20 22:01:01,672 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 7.0.1
+2025-01-20 22:01:01,672 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2025-01-20 22:01:01,672 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 2.0.0
+2025-01-20 22:01:01,673 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2025-01-20 22:01:01,673 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.1.0
+2025-01-20 22:01:01,673 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-STBOX1 2.0.0
+2025-01-20 22:01:01,673 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 11.0.0
+2025-01-20 22:01:01,673 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2025-01-20 22:01:01,673 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2025-01-20 22:01:01,673 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SAFEA1 1.2.2
+2025-01-20 22:01:01,673 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2025-01-20 22:01:01,674 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DPower 1.2.0
+2025-01-20 22:01:01,674 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2025-01-20 22:01:01,674 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2025-01-20 22:01:01,674 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :EmbeddedOffice I-CUBE-FS-RTOS 1.0.1
+2025-01-20 22:01:01,674 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2025-01-20 22:01:01,674 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2025-01-20 22:01:01,674 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Cesanta I-CUBE-Mongoose 7.13.0
+2025-01-20 22:01:01,674 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2025-01-20 22:01:01,674 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 9.0.0
+2025-01-20 22:01:01,674 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TCPP 4.2.0
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :RealThread X-CUBE-RT-Thread_Nano 4.1.1
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC10 1.0.0
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.7.2
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :quantropi X-CUBE-qispace-sdk-base 1.9.3
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 2.0.0
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 4.0.0
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.1.0
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-IPS 3.1.0
+2025-01-20 22:01:01,675 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.2
+2025-01-20 22:01:01,676 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.3.0
+2025-01-20 22:01:01,676 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.3.0
+2025-01-20 22:01:01,676 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2025-01-20 22:01:01,676 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2025-01-20 22:01:01,676 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.24.0
+2025-01-20 22:01:01,676 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :ITTIA_DB I-CUBE-ITTIADB 8.9.0
+2025-01-20 22:01:01,676 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.24.2
+2025-01-20 22:01:01,676 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.24.1
+2025-01-20 22:01:01,676 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfTPM 3.4.0
+2025-01-20 22:01:01,676 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2025-01-20 22:01:01,676 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 3.1.0
+2025-01-20 22:01:01,677 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2025-01-20 22:01:01,677 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-SMARTAG2 1.2.0
+2025-01-20 22:01:01,677 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 11.1.0
+2025-01-20 22:01:01,677 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2025-01-20 22:01:01,677 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2025-01-20 22:01:01,677 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.4.0
+2025-01-20 22:01:01,677 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 5.0.0
+2025-01-20 22:01:01,677 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2025-01-20 22:01:01,679 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7RS 1.0.0
+2025-01-20 22:01:01,679 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfMQTT 1.19.0
+2025-01-20 22:01:01,679 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2025-01-20 22:01:01,680 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2025-01-20 22:01:01,680 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2025-01-20 22:01:01,680 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2025-01-20 22:01:01,680 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2025-01-20 22:01:01,680 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2025-01-20 22:01:01,685 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2025-01-20 22:01:01,686 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.2
+2025-01-20 22:01:01,686 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 9.1.0
+2025-01-20 22:01:01,687 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Infineon AIROC-Wi-Fi-Bluetooth-STM32 1.6.1
+2025-01-20 22:01:01,687 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2025-01-20 22:01:01,687 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSH 1.4.17
+2025-01-20 22:01:01,688 [INFO] ThirdParty:841 - exiting critical section [change project]
+2025-01-20 22:01:02,151 [INFO] PinOutPanel:1589 - setPackage(No Configuration,No Configuration)
+2025-01-20 22:01:02,156 [INFO] PinOutPanel:1589 - setPackage(STM32F103C8Tx,LQFP48)
+2025-01-20 22:01:02,770 [INFO] UtilMem:75 - Before build in PCC Used Memory: 358528304 Bytes (643825664)
+2025-01-20 22:01:03,288 [INFO] UtilMem:75 - After build in PCC Used Memory: 401520032 Bytes (643825664)
+2025-01-20 22:01:03,313 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,313 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,313 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,314 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,314 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,314 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,315 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,315 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,315 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,315 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,315 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,315 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,317 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,317 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,318 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,318 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,318 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,319 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,319 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,319 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,319 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,320 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,320 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,321 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,321 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,321 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,322 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-01-20 22:01:03,324 [WARN] IP:2251 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-01-20 22:01:03,324 [WARN] IP:2251 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-01-20 22:01:03,416 [INFO] CADModel:165 - CPN selected for project levelSTM32F103C8T6
+2025-01-20 22:01:03,416 [INFO] CADModel:114 - Register for checkConnection events
+2025-01-20 22:01:03,484 [INFO] OpenFileManager:363 - Restore cursor
+2025-01-20 22:01:03,890 [WARN] IP:2251 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-01-20 22:01:03,890 [WARN] IP:2251 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-01-20 22:01:03,891 [WARN] IP:2251 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-01-20 22:01:03,891 [WARN] IP:2251 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-01-20 22:01:13,271 [WARN] IP:2251 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-01-20 22:01:13,271 [WARN] IP:2251 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-01-20 22:01:13,271 [WARN] IP:2251 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-01-20 22:01:13,271 [WARN] IP:2251 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-01-20 22:01:19,933 [INFO] RtosManager:922 - Current active RTOS is FREERTOS [Cortex-M3NS]
+2025-01-20 22:01:20,254 [INFO] ApiDbMcu:508 - Load IP Config File for FREERTOS
+2025-01-20 22:01:20,378 [WARN] FreeRTOS:563 - Case being investigated as it may cause exception (when called to early by set config state
+2025-01-20 22:01:20,553 [ERROR] RtosPanel:558 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2025-01-20 22:01:20,659 [ERROR] RtosPanel:558 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2025-01-20 22:01:22,700 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 590282752 Bytes (783286272)
+2025-01-20 22:01:22,832 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 604691536 Bytes (783286272)
+2025-01-20 22:01:24,002 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 711933320 Bytes (783286272)
+2025-01-20 22:01:27,230 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2025-01-20 22:01:27,230 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: FREERTOS
+2025-01-20 22:01:27,230 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2025-01-20 22:01:27,230 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2025-01-20 22:01:27,231 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2025-01-20 22:01:27,231 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2025-01-20 22:01:27,231 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2025-01-20 22:01:27,233 [INFO] CodeGenerator:896 - code generatio: config db path: C:\ST\STM32CubeIDE_1.15.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.13.0.202411220809\\db\
+2025-01-20 22:01:27,246 [WARN] IP:2251 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-01-20 22:01:27,246 [WARN] IP:2251 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-01-20 22:01:27,566 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\license.tmp_save
+2025-01-20 22:01:27,975 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\license.tmp
+2025-01-20 22:01:28,081 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\gpio.tmp_save
+2025-01-20 22:01:28,377 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\gpio.tmp
+2025-01-20 22:01:28,631 [INFO] Middleware:1450 - No code input for Bsp Dependency
+2025-01-20 22:01:28,691 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp_save
+2025-01-20 22:01:28,843 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp
+2025-01-20 22:01:28,896 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp_save
+2025-01-20 22:01:29,017 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp
+2025-01-20 22:01:29,044 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp_save
+2025-01-20 22:01:29,197 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp
+2025-01-20 22:01:29,220 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-01-20 22:01:29,375 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp
+2025-01-20 22:01:29,394 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-01-20 22:01:29,486 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp
+2025-01-20 22:01:29,517 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp_save
+2025-01-20 22:01:29,705 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp
+2025-01-20 22:01:29,736 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp_save
+2025-01-20 22:01:29,884 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp
+2025-01-20 22:01:29,922 [INFO] Middleware:1450 - No code input for Bsp Dependency
+2025-01-20 22:01:29,940 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp_save
+2025-01-20 22:01:30,121 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp
+2025-01-20 22:01:30,135 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp_save
+2025-01-20 22:01:30,298 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp
+2025-01-20 22:01:30,308 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp_save
+2025-01-20 22:01:30,433 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp
+2025-01-20 22:01:30,497 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-01-20 22:01:30,573 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp
+2025-01-20 22:01:30,579 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-01-20 22:01:30,685 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp
+2025-01-20 22:01:30,691 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp_save
+2025-01-20 22:01:30,794 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp
+2025-01-20 22:01:30,806 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp_save
+2025-01-20 22:01:30,888 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp
+2025-01-20 22:01:30,915 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\FreeRTOSConfig.h_save
+2025-01-20 22:01:31,116 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\FreeRTOSConfig.h
+2025-01-20 22:01:31,138 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\freertos.c_save
+2025-01-20 22:01:31,320 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\freertos.c
+2025-01-20 22:01:31,374 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_it.c_save
+2025-01-20 22:01:31,724 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_it.c
+2025-01-20 22:01:31,758 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_it.h_save
+2025-01-20 22:01:31,968 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_it.h
+2025-01-20 22:01:32,025 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_msp.c_save
+2025-01-20 22:01:32,265 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_msp.c
+2025-01-20 22:01:32,281 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\system.tmp_save
+2025-01-20 22:01:32,365 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\system.tmp
+2025-01-20 22:01:32,412 [INFO] CodeEngine:311 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_hal_conf.h_save
+2025-01-20 22:01:32,609 [INFO] CodeEngine:335 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_hal_conf.h
+2025-01-20 22:01:32,668 [INFO] ApiDbMcu:508 - Load IP Config File for I2C1
+2025-01-20 22:01:32,682 [INFO] ApiDbMcu:508 - Load IP Config File for USART1
+2025-01-20 22:01:32,688 [INFO] ApiDbMcu:508 - Load IP Config File for RCC
+2025-01-20 22:01:32,753 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\main.h_save
+2025-01-20 22:01:32,948 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\main.h
+2025-01-20 22:01:32,989 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\main.c_save
+2025-01-20 22:01:33,270 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\main.c
+2025-01-20 22:01:33,985 [INFO] ProjectBuilder:3289 - Time for Copy HAL[1] : 455mS.
+2025-01-20 22:01:33,995 [INFO] ProjectBuilder:4876 - Project Generator version: 4.5.0-RC5
+2025-01-20 22:01:34,174 [INFO] ConfigFileManager:1579 - The Die is : DIE410
+2025-01-20 22:01:34,217 [INFO] ApiDbMcu:508 - Load IP Config File for FATFS
+2025-01-20 22:01:34,284 [INFO] ApiDbMcu:508 - Load IP Config File for USB_DEVICE
+2025-01-20 22:01:35,981 [INFO] ProjectBuilder:5154 - Time for Generating toolchain IDE Files: 1986mS.
+2025-01-20 22:01:35,982 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 0mS.
+2025-01-20 22:01:35,986 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 0mS.
+2025-01-20 22:01:47,578 [ERROR] RtosPanel:558 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2025-01-20 22:05:53,136 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:05:53,728 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:05:53,859 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:05:57,359 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:05:57,359 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:06:11,793 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:06:11,794 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:06:29,070 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:06:29,070 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:06:29,070 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:06:29,070 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:06:29,070 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:06:29,070 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:06:30,422 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:06:30,422 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:06:59,093 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:06:59,094 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:06:59,094 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:06:59,094 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:06:59,094 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:06:59,094 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:06:59,094 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:06:59,094 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:06:59,094 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:00,632 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:07:00,632 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:07:13,199 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:13,200 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:13,200 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:13,200 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:13,200 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:13,200 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:13,200 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:13,200 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:13,200 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:13,200 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:13,200 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:13,200 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:16,367 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:07:16,368 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:07:26,176 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:26,176 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:26,176 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:26,177 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:26,177 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:26,177 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:26,177 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:26,177 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:26,177 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:26,177 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:26,177 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:26,177 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:26,177 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:26,177 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:26,177 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:28,337 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:07:28,339 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:07:42,426 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:42,427 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:42,427 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:42,427 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:42,427 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:42,427 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:42,427 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:42,427 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:42,427 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:42,427 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:42,427 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:42,427 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:42,427 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:42,427 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:42,427 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:44,206 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:07:44,206 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:07:53,732 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:53,732 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:53,732 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:53,732 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:53,732 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:53,732 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:53,733 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:53,733 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:53,733 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:53,733 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:53,733 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:53,733 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:53,733 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:53,733 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:53,733 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:07:53,733 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:07:53,733 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:07:53,733 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-01-20 22:24:11,283 [ERROR] RtosPanel:193 - propertyChange ==> exception: class java.lang.NumberFormatException For input string: ""
+2025-01-20 22:24:11,321 [ERROR] RtosPanel:193 - propertyChange ==> exception: class java.lang.NumberFormatException For input string: ""
+2025-01-20 22:25:06,406 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:25:06,407 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:25:06,408 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:25:06,408 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:25:06,408 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:25:06,408 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:25:06,408 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:25:06,408 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:25:06,408 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:25:06,408 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:25:06,408 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:25:06,408 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:25:06,408 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:25:06,408 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:25:06,408 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:25:06,408 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:25:06,408 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:25:06,408 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:25:36,412 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 355007312 Bytes (783286272)
+2025-01-20 22:25:36,561 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 369421352 Bytes (783286272)
+2025-01-20 22:25:37,403 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 448767344 Bytes (783286272)
+2025-01-20 22:25:41,195 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2025-01-20 22:25:41,195 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: FREERTOS
+2025-01-20 22:25:41,195 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2025-01-20 22:25:41,195 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2025-01-20 22:25:41,196 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2025-01-20 22:25:41,196 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2025-01-20 22:25:41,196 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2025-01-20 22:25:41,198 [INFO] CodeGenerator:896 - code generatio: config db path: C:\ST\STM32CubeIDE_1.15.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.13.0.202411220809\\db\
+2025-01-20 22:25:41,208 [WARN] IP:2251 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-01-20 22:25:41,208 [WARN] IP:2251 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-01-20 22:25:41,369 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\license.tmp_save
+2025-01-20 22:25:41,658 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\license.tmp
+2025-01-20 22:25:41,718 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\gpio.tmp_save
+2025-01-20 22:25:42,029 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\gpio.tmp
+2025-01-20 22:25:42,299 [INFO] Middleware:1450 - No code input for Bsp Dependency
+2025-01-20 22:25:42,311 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp_save
+2025-01-20 22:25:42,476 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp
+2025-01-20 22:25:42,482 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp_save
+2025-01-20 22:25:42,633 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp
+2025-01-20 22:25:42,642 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp_save
+2025-01-20 22:25:42,795 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp
+2025-01-20 22:25:42,803 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-01-20 22:25:43,002 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp
+2025-01-20 22:25:43,009 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-01-20 22:25:43,122 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp
+2025-01-20 22:25:43,130 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp_save
+2025-01-20 22:25:43,303 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp
+2025-01-20 22:25:43,312 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp_save
+2025-01-20 22:25:43,599 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp
+2025-01-20 22:25:43,692 [INFO] Middleware:1450 - No code input for Bsp Dependency
+2025-01-20 22:25:43,709 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp_save
+2025-01-20 22:25:43,976 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp
+2025-01-20 22:25:43,987 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp_save
+2025-01-20 22:25:44,189 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp
+2025-01-20 22:25:44,200 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp_save
+2025-01-20 22:25:44,418 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp
+2025-01-20 22:25:44,484 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-01-20 22:25:44,687 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp
+2025-01-20 22:25:44,700 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-01-20 22:25:45,169 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp
+2025-01-20 22:25:45,181 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp_save
+2025-01-20 22:25:45,547 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp
+2025-01-20 22:25:45,558 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp_save
+2025-01-20 22:25:45,897 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp
+2025-01-20 22:25:45,986 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\FreeRTOSConfig.h_save
+2025-01-20 22:25:46,354 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\FreeRTOSConfig.h
+2025-01-20 22:25:46,397 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\freertos.c_save
+2025-01-20 22:25:46,563 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\freertos.c
+2025-01-20 22:25:46,621 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_it.c_save
+2025-01-20 22:25:46,983 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_it.c
+2025-01-20 22:25:46,994 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_it.h_save
+2025-01-20 22:25:47,160 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_it.h
+2025-01-20 22:25:47,210 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_msp.c_save
+2025-01-20 22:25:47,407 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_msp.c
+2025-01-20 22:25:47,413 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\system.tmp_save
+2025-01-20 22:25:47,542 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\system.tmp
+2025-01-20 22:25:47,618 [INFO] CodeEngine:311 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_hal_conf.h_save
+2025-01-20 22:25:47,779 [INFO] CodeEngine:335 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_hal_conf.h
+2025-01-20 22:25:47,864 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\main.h_save
+2025-01-20 22:25:48,093 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\main.h
+2025-01-20 22:25:48,121 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\main.c_save
+2025-01-20 22:25:48,380 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\main.c
+2025-01-20 22:25:49,427 [INFO] ProjectBuilder:3289 - Time for Copy HAL[1] : 642mS.
+2025-01-20 22:25:49,438 [INFO] ProjectBuilder:4876 - Project Generator version: 4.5.0-RC5
+2025-01-20 22:25:49,633 [INFO] ConfigFileManager:1579 - The Die is : DIE410
+2025-01-20 22:25:51,744 [INFO] ProjectBuilder:5154 - Time for Generating toolchain IDE Files: 2307mS.
+2025-01-20 22:25:51,745 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 1mS.
+2025-01-20 22:25:51,750 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 0mS.
+2025-01-20 22:26:07,754 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 503224632 Bytes (783286272)
+2025-01-20 22:26:08,185 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 515530968 Bytes (783286272)
+2025-01-20 22:26:09,625 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 579770680 Bytes (783286272)
+2025-01-20 22:26:10,023 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2025-01-20 22:26:10,023 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: FREERTOS
+2025-01-20 22:26:10,024 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2025-01-20 22:26:10,024 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2025-01-20 22:26:10,025 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2025-01-20 22:26:10,025 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2025-01-20 22:26:10,025 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2025-01-20 22:26:10,027 [INFO] CodeGenerator:896 - code generatio: config db path: C:\ST\STM32CubeIDE_1.15.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.13.0.202411220809\\db\
+2025-01-20 22:26:10,049 [WARN] IP:2251 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-01-20 22:26:10,049 [WARN] IP:2251 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-01-20 22:26:10,314 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\license.tmp_save
+2025-01-20 22:26:10,571 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\license.tmp
+2025-01-20 22:26:10,637 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\gpio.tmp_save
+2025-01-20 22:26:10,887 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\gpio.tmp
+2025-01-20 22:26:11,193 [INFO] Middleware:1450 - No code input for Bsp Dependency
+2025-01-20 22:26:11,208 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp_save
+2025-01-20 22:26:11,403 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp
+2025-01-20 22:26:11,412 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp_save
+2025-01-20 22:26:11,552 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp
+2025-01-20 22:26:11,559 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp_save
+2025-01-20 22:26:11,751 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp
+2025-01-20 22:26:11,758 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-01-20 22:26:11,921 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp
+2025-01-20 22:26:11,928 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-01-20 22:26:12,049 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp
+2025-01-20 22:26:12,055 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp_save
+2025-01-20 22:26:12,170 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp
+2025-01-20 22:26:12,178 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp_save
+2025-01-20 22:26:12,297 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp
+2025-01-20 22:26:12,317 [INFO] Middleware:1450 - No code input for Bsp Dependency
+2025-01-20 22:26:12,331 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp_save
+2025-01-20 22:26:12,501 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp
+2025-01-20 22:26:12,510 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp_save
+2025-01-20 22:26:12,619 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp
+2025-01-20 22:26:12,627 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp_save
+2025-01-20 22:26:12,723 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp
+2025-01-20 22:26:12,747 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-01-20 22:26:12,858 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp
+2025-01-20 22:26:12,866 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-01-20 22:26:12,987 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp
+2025-01-20 22:26:12,996 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp_save
+2025-01-20 22:26:13,113 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp
+2025-01-20 22:26:13,122 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp_save
+2025-01-20 22:26:13,227 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp
+2025-01-20 22:26:13,249 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\FreeRTOSConfig.h_save
+2025-01-20 22:26:13,475 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\FreeRTOSConfig.h
+2025-01-20 22:26:13,510 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\freertos.c_save
+2025-01-20 22:26:13,626 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\freertos.c
+2025-01-20 22:26:13,668 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_it.c_save
+2025-01-20 22:26:13,896 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_it.c
+2025-01-20 22:26:13,929 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_it.h_save
+2025-01-20 22:26:14,066 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_it.h
+2025-01-20 22:26:14,110 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_msp.c_save
+2025-01-20 22:26:14,281 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_msp.c
+2025-01-20 22:26:14,288 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\system.tmp_save
+2025-01-20 22:26:14,409 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\system.tmp
+2025-01-20 22:26:14,443 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_timebase_tim.c_save
+2025-01-20 22:26:14,670 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_timebase_tim.c
+2025-01-20 22:26:14,739 [INFO] CodeEngine:311 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_hal_conf.h_save
+2025-01-20 22:26:14,973 [INFO] CodeEngine:335 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_hal_conf.h
+2025-01-20 22:26:15,088 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\main.h_save
+2025-01-20 22:26:15,251 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\main.h
+2025-01-20 22:26:15,278 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\main.c_save
+2025-01-20 22:26:15,543 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\main.c
+2025-01-20 22:26:16,248 [INFO] ProjectBuilder:3289 - Time for Copy HAL[1] : 311mS.
+2025-01-20 22:26:16,259 [INFO] ProjectBuilder:4876 - Project Generator version: 4.5.0-RC5
+2025-01-20 22:26:16,430 [INFO] ConfigFileManager:1579 - The Die is : DIE410
+2025-01-20 22:26:17,808 [INFO] ProjectBuilder:5154 - Time for Generating toolchain IDE Files: 1550mS.
+2025-01-20 22:26:17,809 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 1mS.
+2025-01-20 22:26:17,814 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 0mS.
+2025-01-20 22:33:00,817 [ERROR] RtosPanel:558 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2025-01-20 22:33:22,383 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:22,383 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:22,383 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:22,383 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:22,383 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:22,383 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:22,383 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:22,383 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:22,383 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:22,383 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:22,383 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:22,383 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:22,383 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:22,383 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:22,383 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:22,383 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:22,383 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:22,383 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:24,507 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:33:24,507 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:33:39,204 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:33:39,204 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:33:45,333 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:45,334 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:45,334 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:45,334 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:45,334 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:45,334 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:45,334 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:45,334 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:45,334 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:45,334 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:45,334 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:45,334 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:45,334 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:45,334 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:45,334 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:45,334 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:45,334 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:45,334 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:46,404 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:33:46,404 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:33:49,633 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:49,634 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:49,634 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:49,634 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:49,634 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:49,634 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:49,634 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:49,634 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:49,634 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:49,634 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:49,635 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:49,635 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:49,635 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:49,635 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:49,635 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:49,635 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:49,635 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:49,635 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:50,483 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:33:50,484 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:33:55,581 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:55,581 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:55,581 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:55,581 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:55,581 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:55,581 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:55,581 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:55,582 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:55,582 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:55,582 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:55,582 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:55,582 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:55,582 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:55,582 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:55,582 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:55,582 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:55,583 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:55,583 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:56,439 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:33:56,439 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:33:59,333 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:59,333 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:59,333 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:59,333 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:59,333 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:59,333 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:59,333 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:59,333 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:59,333 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:59,333 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:59,333 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:59,333 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:59,333 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:59,333 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:59,333 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:33:59,333 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:33:59,333 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:33:59,333 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:34:01,478 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:34:01,479 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:34:09,697 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 578865888 Bytes (783286272)
+2025-01-20 22:34:09,802 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 591810472 Bytes (783286272)
+2025-01-20 22:34:10,509 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 631695784 Bytes (783286272)
+2025-01-20 22:34:10,846 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2025-01-20 22:34:10,846 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: FREERTOS
+2025-01-20 22:34:10,846 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2025-01-20 22:34:10,846 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2025-01-20 22:34:10,846 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2025-01-20 22:34:10,846 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2025-01-20 22:34:10,846 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2025-01-20 22:34:10,848 [INFO] CodeGenerator:896 - code generatio: config db path: C:\ST\STM32CubeIDE_1.15.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.13.0.202411220809\\db\
+2025-01-20 22:34:10,855 [WARN] IP:2251 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-01-20 22:34:10,855 [WARN] IP:2251 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-01-20 22:34:10,982 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\license.tmp_save
+2025-01-20 22:34:11,139 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\license.tmp
+2025-01-20 22:34:11,209 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\gpio.tmp_save
+2025-01-20 22:34:11,458 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\gpio.tmp
+2025-01-20 22:34:11,620 [INFO] Middleware:1450 - No code input for Bsp Dependency
+2025-01-20 22:34:11,630 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp_save
+2025-01-20 22:34:11,772 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp
+2025-01-20 22:34:11,779 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp_save
+2025-01-20 22:34:11,886 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp
+2025-01-20 22:34:11,891 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp_save
+2025-01-20 22:34:12,030 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp
+2025-01-20 22:34:12,037 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-01-20 22:34:12,174 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp
+2025-01-20 22:34:12,180 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-01-20 22:34:12,294 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp
+2025-01-20 22:34:12,302 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp_save
+2025-01-20 22:34:12,452 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp
+2025-01-20 22:34:12,458 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp_save
+2025-01-20 22:34:12,592 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp
+2025-01-20 22:34:12,607 [INFO] Middleware:1450 - No code input for Bsp Dependency
+2025-01-20 22:34:12,621 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp_save
+2025-01-20 22:34:12,749 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp
+2025-01-20 22:34:12,755 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp_save
+2025-01-20 22:34:12,850 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp
+2025-01-20 22:34:12,858 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp_save
+2025-01-20 22:34:12,951 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp
+2025-01-20 22:34:12,982 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-01-20 22:34:13,085 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp
+2025-01-20 22:34:13,093 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-01-20 22:34:13,189 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp
+2025-01-20 22:34:13,199 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp_save
+2025-01-20 22:34:13,297 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp
+2025-01-20 22:34:13,305 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp_save
+2025-01-20 22:34:13,407 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp
+2025-01-20 22:34:13,438 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\FreeRTOSConfig.h_save
+2025-01-20 22:34:13,602 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\FreeRTOSConfig.h
+2025-01-20 22:34:13,627 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\freertos.c_save
+2025-01-20 22:34:13,745 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\freertos.c
+2025-01-20 22:34:13,787 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_it.c_save
+2025-01-20 22:34:13,916 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_it.c
+2025-01-20 22:34:13,939 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_it.h_save
+2025-01-20 22:34:14,039 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_it.h
+2025-01-20 22:34:14,075 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_msp.c_save
+2025-01-20 22:34:14,243 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_msp.c
+2025-01-20 22:34:14,247 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\system.tmp_save
+2025-01-20 22:34:14,341 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\system.tmp
+2025-01-20 22:34:14,370 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_timebase_tim.c_save
+2025-01-20 22:34:14,598 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_timebase_tim.c
+2025-01-20 22:34:14,637 [INFO] CodeEngine:311 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_hal_conf.h_save
+2025-01-20 22:34:14,884 [INFO] CodeEngine:335 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_hal_conf.h
+2025-01-20 22:34:14,966 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\main.h_save
+2025-01-20 22:34:15,117 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\main.h
+2025-01-20 22:34:15,145 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\main.c_save
+2025-01-20 22:34:15,451 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\main.c
+2025-01-20 22:34:16,592 [INFO] ProjectBuilder:3289 - Time for Copy HAL[1] : 579mS.
+2025-01-20 22:34:16,601 [INFO] ProjectBuilder:4876 - Project Generator version: 4.5.0-RC5
+2025-01-20 22:34:16,823 [INFO] ConfigFileManager:1579 - The Die is : DIE410
+2025-01-20 22:34:19,180 [INFO] ProjectBuilder:5154 - Time for Generating toolchain IDE Files: 2579mS.
+2025-01-20 22:34:19,181 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 0mS.
+2025-01-20 22:34:19,187 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 1mS.
+2025-01-20 22:38:27,045 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:38:27,047 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:38:58,379 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:38:58,379 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:38:58,380 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:38:58,380 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:38:58,380 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:38:58,380 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:38:58,380 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:38:58,380 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:38:58,380 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:38:58,380 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:38:58,380 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:38:58,380 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:38:58,380 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:38:58,380 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:38:58,380 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:38:58,380 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:38:58,380 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:38:58,380 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:00,609 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:39:00,610 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:39:11,653 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:11,653 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:11,653 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:11,653 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:11,654 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:11,655 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:11,655 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:11,655 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:11,655 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:11,655 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:11,655 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:11,655 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:11,655 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:11,655 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:11,655 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:11,656 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:11,656 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:11,656 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:14,106 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:39:14,106 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:39:24,321 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:24,321 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:24,321 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:24,321 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:24,321 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:24,321 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:24,321 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:24,321 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:24,321 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:24,321 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:24,321 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:24,321 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:24,321 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:24,321 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:24,321 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:24,321 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:24,321 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:24,322 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:25,358 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:39:25,358 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:39:36,024 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:36,024 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:36,025 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:36,025 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:36,025 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:36,025 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:36,025 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:36,025 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:36,025 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:36,025 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:36,025 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:36,025 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:36,025 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:36,025 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:36,025 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:36,025 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:36,025 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:36,025 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:37,794 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:39:37,794 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:39:45,729 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:45,729 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:45,729 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:45,729 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:45,729 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:45,729 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:45,731 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:45,731 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:45,731 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:45,731 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:45,731 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:45,731 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:45,731 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:45,731 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:45,731 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:45,731 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:39:45,731 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:39:45,731 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:39:46,522 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 20
+2025-01-20 22:39:46,523 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 5120
+2025-01-20 22:40:02,177 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:40:02,177 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:40:02,177 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:40:02,177 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:40:02,178 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:40:02,178 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:40:02,178 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:40:02,178 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:40:02,178 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:40:02,178 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:40:02,178 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:40:02,178 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:40:02,178 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:40:02,178 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:40:02,178 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:40:02,179 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-01-20 22:40:02,179 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-01-20 22:40:02,179 [WARN] TasksAndQueuesTab:775 - max value is: 4096.0
+2025-01-20 22:40:04,240 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 638394152 Bytes (783286272)
+2025-01-20 22:40:04,386 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 650715752 Bytes (783286272)
+2025-01-20 22:40:05,125 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 706551592 Bytes (783286272)
+2025-01-20 22:40:05,542 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2025-01-20 22:40:05,542 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: FREERTOS
+2025-01-20 22:40:05,542 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2025-01-20 22:40:05,542 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2025-01-20 22:40:05,542 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2025-01-20 22:40:05,542 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2025-01-20 22:40:05,542 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2025-01-20 22:40:05,544 [INFO] CodeGenerator:896 - code generatio: config db path: C:\ST\STM32CubeIDE_1.15.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.13.0.202411220809\\db\
+2025-01-20 22:40:05,552 [WARN] IP:2251 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-01-20 22:40:05,553 [WARN] IP:2251 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-01-20 22:40:05,668 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\license.tmp_save
+2025-01-20 22:40:06,096 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\license.tmp
+2025-01-20 22:40:06,135 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\gpio.tmp_save
+2025-01-20 22:40:06,288 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\gpio.tmp
+2025-01-20 22:40:06,415 [INFO] Middleware:1450 - No code input for Bsp Dependency
+2025-01-20 22:40:06,423 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp_save
+2025-01-20 22:40:06,578 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp
+2025-01-20 22:40:06,586 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp_save
+2025-01-20 22:40:06,684 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp
+2025-01-20 22:40:06,689 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp_save
+2025-01-20 22:40:06,787 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp
+2025-01-20 22:40:06,793 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-01-20 22:40:06,907 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp
+2025-01-20 22:40:06,913 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-01-20 22:40:07,004 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp
+2025-01-20 22:40:07,013 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp_save
+2025-01-20 22:40:07,113 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp
+2025-01-20 22:40:07,119 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp_save
+2025-01-20 22:40:07,204 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp
+2025-01-20 22:40:07,220 [INFO] Middleware:1450 - No code input for Bsp Dependency
+2025-01-20 22:40:07,231 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp_save
+2025-01-20 22:40:07,317 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp
+2025-01-20 22:40:07,322 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp_save
+2025-01-20 22:40:07,386 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp
+2025-01-20 22:40:07,392 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp_save
+2025-01-20 22:40:07,455 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp
+2025-01-20 22:40:07,470 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-01-20 22:40:07,554 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp
+2025-01-20 22:40:07,559 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-01-20 22:40:07,621 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp
+2025-01-20 22:40:07,646 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp_save
+2025-01-20 22:40:07,714 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp
+2025-01-20 22:40:07,720 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp_save
+2025-01-20 22:40:07,786 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp
+2025-01-20 22:40:07,811 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\FreeRTOSConfig.h_save
+2025-01-20 22:40:07,936 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\FreeRTOSConfig.h
+2025-01-20 22:40:07,957 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\freertos.c_save
+2025-01-20 22:40:08,033 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\freertos.c
+2025-01-20 22:40:08,066 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_it.c_save
+2025-01-20 22:40:08,157 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_it.c
+2025-01-20 22:40:08,173 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_it.h_save
+2025-01-20 22:40:08,246 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_it.h
+2025-01-20 22:40:08,281 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_msp.c_save
+2025-01-20 22:40:08,382 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_msp.c
+2025-01-20 22:40:08,386 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\system.tmp_save
+2025-01-20 22:40:08,454 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\system.tmp
+2025-01-20 22:40:08,476 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_timebase_tim.c_save
+2025-01-20 22:40:08,565 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_timebase_tim.c
+2025-01-20 22:40:08,590 [INFO] CodeEngine:311 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_hal_conf.h_save
+2025-01-20 22:40:08,712 [INFO] CodeEngine:335 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_hal_conf.h
+2025-01-20 22:40:08,782 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\main.h_save
+2025-01-20 22:40:08,877 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\main.h
+2025-01-20 22:40:08,903 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\main.c_save
+2025-01-20 22:40:09,137 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\main.c
+2025-01-20 22:40:09,842 [INFO] ProjectBuilder:3289 - Time for Copy HAL[1] : 419mS.
+2025-01-20 22:40:09,850 [INFO] ProjectBuilder:4876 - Project Generator version: 4.5.0-RC5
+2025-01-20 22:40:10,013 [INFO] ConfigFileManager:1579 - The Die is : DIE410
+2025-01-20 22:40:11,843 [INFO] ProjectBuilder:5154 - Time for Generating toolchain IDE Files: 1993mS.
+2025-01-20 22:40:11,844 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 0mS.
+2025-01-20 22:40:11,874 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 0mS.
+2025-01-20 22:42:17,167 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 352282096 Bytes (783286272)
+2025-01-20 22:42:17,253 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 365799896 Bytes (783286272)
+2025-01-20 22:42:17,954 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 393585112 Bytes (783286272)
+2025-01-20 22:42:18,187 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2025-01-20 22:42:18,187 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: FREERTOS
+2025-01-20 22:42:18,187 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2025-01-20 22:42:18,187 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2025-01-20 22:42:18,187 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2025-01-20 22:42:18,187 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2025-01-20 22:42:18,187 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2025-01-20 22:42:18,188 [INFO] CodeGenerator:896 - code generatio: config db path: C:\ST\STM32CubeIDE_1.15.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.13.0.202411220809\\db\
+2025-01-20 22:42:18,193 [WARN] IP:2251 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-01-20 22:42:18,193 [WARN] IP:2251 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-01-20 22:42:18,335 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\license.tmp_save
+2025-01-20 22:42:18,509 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\license.tmp
+2025-01-20 22:42:18,543 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\gpio.tmp_save
+2025-01-20 22:42:18,759 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\gpio.tmp
+2025-01-20 22:42:18,886 [INFO] Middleware:1450 - No code input for Bsp Dependency
+2025-01-20 22:42:18,894 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp_save
+2025-01-20 22:42:19,049 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp
+2025-01-20 22:42:19,056 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp_save
+2025-01-20 22:42:19,172 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp
+2025-01-20 22:42:19,179 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp_save
+2025-01-20 22:42:19,271 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp
+2025-01-20 22:42:19,277 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-01-20 22:42:19,445 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp
+2025-01-20 22:42:19,451 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-01-20 22:42:19,542 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp
+2025-01-20 22:42:19,549 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp_save
+2025-01-20 22:42:19,642 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp
+2025-01-20 22:42:19,648 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp_save
+2025-01-20 22:42:19,738 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp
+2025-01-20 22:42:19,754 [INFO] Middleware:1450 - No code input for Bsp Dependency
+2025-01-20 22:42:19,767 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp_save
+2025-01-20 22:42:19,891 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_inc.tmp
+2025-01-20 22:42:19,900 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp_save
+2025-01-20 22:42:19,999 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_vars.tmp
+2025-01-20 22:42:20,008 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp_save
+2025-01-20 22:42:20,099 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_pfp.tmp
+2025-01-20 22:42:20,120 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-01-20 22:42:20,214 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_obj_creat.tmp
+2025-01-20 22:42:20,222 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-01-20 22:42:20,310 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_kernelStart.tmp
+2025-01-20 22:42:20,318 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp_save
+2025-01-20 22:42:20,416 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_default_thread.tmp
+2025-01-20 22:42:20,424 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp_save
+2025-01-20 22:42:20,510 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\rtos_threads.tmp
+2025-01-20 22:42:20,539 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\FreeRTOSConfig.h_save
+2025-01-20 22:42:20,702 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\FreeRTOSConfig.h
+2025-01-20 22:42:20,725 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\freertos.c_save
+2025-01-20 22:42:20,824 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\freertos.c
+2025-01-20 22:42:20,858 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_it.c_save
+2025-01-20 22:42:21,008 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_it.c
+2025-01-20 22:42:21,043 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_it.h_save
+2025-01-20 22:42:21,154 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_it.h
+2025-01-20 22:42:21,191 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_msp.c_save
+2025-01-20 22:42:21,327 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_msp.c
+2025-01-20 22:42:21,333 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\system.tmp_save
+2025-01-20 22:42:21,422 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\MXTmpFiles\system.tmp
+2025-01-20 22:42:21,453 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_timebase_tim.c_save
+2025-01-20 22:42:21,605 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\stm32f1xx_hal_timebase_tim.c
+2025-01-20 22:42:21,639 [INFO] CodeEngine:311 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_hal_conf.h_save
+2025-01-20 22:42:21,801 [INFO] CodeEngine:335 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\stm32f1xx_hal_conf.h
+2025-01-20 22:42:21,866 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\main.h_save
+2025-01-20 22:42:21,994 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Inc\main.h
+2025-01-20 22:42:22,020 [INFO] CodeEngine:255 - oldGeneratedFile, D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\main.c_save
+2025-01-20 22:42:22,263 [INFO] CodeEngine:279 - Generated code: D:\File\Project\TKHTN2024\CodeSTM\RMS\Core\Src\main.c
+2025-01-20 22:42:22,861 [INFO] ProjectBuilder:3289 - Time for Copy HAL[1] : 312mS.
+2025-01-20 22:42:22,867 [INFO] ProjectBuilder:4876 - Project Generator version: 4.5.0-RC5
+2025-01-20 22:42:23,016 [INFO] ConfigFileManager:1579 - The Die is : DIE410
+2025-01-20 22:42:24,387 [INFO] ProjectBuilder:5154 - Time for Generating toolchain IDE Files: 1520mS.
+2025-01-20 22:42:24,388 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 0mS.
+2025-01-20 22:42:24,393 [INFO] ProjectBuilder:3146 - Time for Copy CMSIS : 0mS.
+2025-01-20 22:49:30,650 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-01-20 22:49:30,652 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

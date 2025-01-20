@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "cmsis_os.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -31,17 +32,25 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-#include "funtion.h"
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+#define MASK_RESPONSE 127
+#define RESPONSES(Code)   (Code)
+#define UPGRADE(Code) (Code+MASK_RESPONSE)
+#define CODE_TEMP  1
+#define CODE_PRES  2
+#define CODE_KEY   3
+#define CODE_COUNT 4
+#define CODE_RESP  5
+#define MY_ADDRESS 111
+#include "funtion.h"
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -49,8 +58,29 @@ I2C_HandleTypeDef hi2c1;
 
 UART_HandleTypeDef huart1;
 
+osThreadId RXUARTTaskHandle;
+osThreadId LCDHandle;
+osThreadId ReadTempTaskHandle;
+osThreadId ReadPressTaskHandle;
+osThreadId KeyTaskHandle;
+osThreadId TXUARTTaskHandle;
+osMutexId I2C_BusHandle;
 /* USER CODE BEGIN PV */
-
+char print_lcd_row1[30];
+char print_lcd_row2[30];
+char send_to_rs485[50];
+char read_to_rs485[50];
+char indicate_1[] = "Send To RS485";
+char indicate_T[] = "Send Temperature";
+char indicate_P[] = "Send Pressure";
+char indicate_C[] = "Send Count";
+char indicate_M[] = "Send Status";
+char indicate_E[] = "CRC Error";
+char key_board[20];
+float temperature;
+int32_t pressure;
+uint8_t len_key_board = 0, last_send = 0;
+uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -58,13 +88,39 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_USART1_UART_Init(void);
-/* USER CODE BEGIN PFP */
+void RX_Task(void const * argument);
+void LCD_Task(void const * argument);
+void Temp_Task(void const * argument);
+void Press_Task(void const * argument);
+void Key_Task(void const * argument);
+void TX_Task(void const * argument);
 
+/* USER CODE BEGIN PFP */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+void TaskTempBMP180()
+{
+
+}
+
+void TaskPressBMP180()
+{
+
+}
+
+void TaskLCD()
+{
+}
+
+void TaskRX()
+{}
+
+void TaskTX()
+{}
 /* USER CODE END 0 */
 
 /**
@@ -107,13 +163,64 @@ int main(void)
   BMP180_UpdateCalibrationData();
   HD44780_SetCursor(0,0);
   HD44780_PrintStr("INIT LCD 1602");
-  char tx_buff[100] = "TVBAC 212700";
-  unsigned long t1 = DWT->CYCCNT;
-  /* do something */
-  unsigned long t2 = DWT->CYCCNT;
-  unsigned long diff = t2 - t1;
+//  count_touch = 0;
 
   /* USER CODE END 2 */
+
+  /* Create the mutex(es) */
+  /* definition and creation of I2C_Bus */
+  osMutexDef(I2C_Bus);
+  I2C_BusHandle = osMutexCreate(osMutex(I2C_Bus));
+
+  /* USER CODE BEGIN RTOS_MUTEX */
+  /* add mutexes, ... */
+  /* USER CODE END RTOS_MUTEX */
+
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* add semaphores, ... */
+  /* USER CODE END RTOS_SEMAPHORES */
+
+  /* USER CODE BEGIN RTOS_TIMERS */
+  /* start timers, add new ones, ... */
+  /* USER CODE END RTOS_TIMERS */
+
+  /* USER CODE BEGIN RTOS_QUEUES */
+  /* add queues, ... */
+  /* USER CODE END RTOS_QUEUES */
+
+  /* Create the thread(s) */
+  /* definition and creation of RXUARTTask */
+  osThreadDef(RXUARTTask, RX_Task, osPriorityNormal, 0, 128);
+  RXUARTTaskHandle = osThreadCreate(osThread(RXUARTTask), NULL);
+
+  /* definition and creation of LCD */
+  osThreadDef(LCD, LCD_Task, osPriorityIdle, 0, 128);
+  LCDHandle = osThreadCreate(osThread(LCD), NULL);
+
+  /* definition and creation of ReadTempTask */
+  osThreadDef(ReadTempTask, Temp_Task, osPriorityNormal, 0, 128);
+  ReadTempTaskHandle = osThreadCreate(osThread(ReadTempTask), NULL);
+
+  /* definition and creation of ReadPressTask */
+  osThreadDef(ReadPressTask, Press_Task, osPriorityNormal, 0, 128);
+  ReadPressTaskHandle = osThreadCreate(osThread(ReadPressTask), NULL);
+
+  /* definition and creation of KeyTask */
+  osThreadDef(KeyTask, Key_Task, osPriorityNormal, 0, 128);
+  KeyTaskHandle = osThreadCreate(osThread(KeyTask), NULL);
+
+  /* definition and creation of TXUARTTask */
+  osThreadDef(TXUARTTask, TX_Task, osPriorityNormal, 0, 128);
+  TXUARTTaskHandle = osThreadCreate(osThread(TXUARTTask), NULL);
+
+  /* USER CODE BEGIN RTOS_THREADS */
+  /* add threads, ... */
+  /* USER CODE END RTOS_THREADS */
+
+  /* Start scheduler */
+  osKernelStart();
+
+  /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -122,39 +229,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  char tx[100] = "1";
-	  t1 = DWT->CYCCNT;
-	  HD44780_SetCursor(0,0);
-	  HD44780_PrintStr("1111111111111111");
-//	  touched();
-//	  int32_t temperature = BMP180_GetRawTemperature();
-//	  int32_t pressure = BMP180_GetPressure();
-//	  HAL_UART_Transmit(&huart1, (uint8_t *)&tx, strlen(tx) , 1000);
-	  t2 = DWT->CYCCNT;
-	  diff = t2 - t1;
-	  memset((void*)tx_buff,0,sizeof(tx_buff));
-	  sprintf(tx_buff, "[%ld]", diff/72);
-	  HD44780_SetCursor(0,1);
-	  HD44780_PrintStr(tx_buff);
-
-	  // Test UART
-//	  char tx[100];
-//	  for(int i = 1; i <= 50; i++)
-//	  {
-//		  memset((void*)tx,0,sizeof(tx));
-//		  memset((void*)tx,'0',i);
-////		  tx[i-1] = '\n';
-//		  t1 = DWT->CYCCNT;
-//		  HAL_UART_Transmit(&huart1, (uint8_t *)&tx, strlen(tx) , 1000);
-//		  t2 = DWT->CYCCNT;
-//		  diff = t2 - t1;
-//		  sprintf(tx_buff, "] %d]]]%ld\n",i, diff/72);
-//		  HAL_UART_Transmit(&huart1, (uint8_t *)&tx_buff, strlen(tx_buff) , 1000);
-//		  HD44780_SetCursor(0,1);
-//		  HD44780_PrintStr(tx_buff);
-		  HAL_Delay(50);
-//	  }
-//	  HAL_Delay(20000);
   }
   /* USER CODE END 3 */
 }
@@ -292,13 +366,324 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : INT_Pin */
+  GPIO_InitStruct.Pin = INT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(INT_GPIO_Port, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	if(GPIO_Pin == INT_Pin) {
+		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+		count_touch++;
+	} else {
+		__NOP();
+	}
+}
 
 /* USER CODE END 4 */
+
+/* USER CODE BEGIN Header_RX_Task */
+/**
+  * @brief  Function implementing the RXUARTTask thread.
+  * @param  argument: Not used
+  * @retval None
+  */
+/* USER CODE END Header_RX_Task */
+void RX_Task(void const * argument)
+{
+  /* USER CODE BEGIN 5 */
+  /* Infinite loop */
+  for(;;)
+  {
+
+		memset((void*)read_to_rs485,0,sizeof(read_to_rs485));
+		HAL_UART_Receive(&huart1, (uint8_t *)&read_to_rs485, sizeof (read_to_rs485) , 500);
+		  if(strlen(read_to_rs485) > 1)
+		  {
+			  DataStruct result;
+			  parse_data(read_to_rs485,&result);
+			  if(result.Addr == MY_ADDRESS && check_crc(&result) == result.Crc)
+			  {
+				  if(result.Code == 1)
+				  {
+					  if(result.Data[0] == '1')
+					  {
+						  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+						  sprintf(send_to_rs485, "%.1fC", temperature);
+						  gen_data_send_rs485(RESPONSES(CODE_TEMP),send_to_rs485);
+						  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+						  memcpy((void*)print_lcd_row2, (void*)indicate_T, sizeof(indicate_T));
+
+					  }
+					  else if (result.Data[0] == '2')
+					  {
+						  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+						  sprintf(send_to_rs485, "%dPa", (int) pressure);
+						  gen_data_send_rs485(RESPONSES(CODE_PRES),send_to_rs485);
+						  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+						  memcpy((void*)print_lcd_row2, (void*)indicate_P, sizeof(indicate_P));
+
+					  }
+					  else if (result.Data[0] == '4')
+					  {
+						  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+						  sprintf(send_to_rs485, "%dN", (int) count_touch);
+						  gen_data_send_rs485(RESPONSES(CODE_COUNT),send_to_rs485);
+						  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+						  memcpy((void*)print_lcd_row2, (void*)indicate_C, sizeof(indicate_C));
+					  }
+				  }
+				  else if(result.Code == 2)
+				  {
+					  result.Data[result.Len] = '\0';
+					  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+					  memcpy((void*)print_lcd_row2, (void*)(char*)result.Data, strlen((char*)result.Data));
+					  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+					  sprintf(send_to_rs485, "Okee");
+					  gen_data_send_rs485(RESPONSES(CODE_RESP),send_to_rs485);
+				  }
+				  else if(result.Code == 3)
+				  {
+					  result.Data[result.Len] = '\0';
+					  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+					  memcpy((void*)print_lcd_row2, (void*)indicate_M, sizeof(indicate_M));
+					  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+					  sprintf(send_to_rs485, "Okee");
+					  gen_data_send_rs485(RESPONSES(CODE_RESP),send_to_rs485);
+				  }
+			  }
+			  else if(check_crc(&result) != result.Crc)
+			  {
+				  result.Data[result.Len] = '\0';
+				  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+				  memcpy((void*)print_lcd_row2, (void*)indicate_E, sizeof(indicate_E));
+				  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+				  sprintf(send_to_rs485, "Error Crc");
+				  gen_data_send_rs485(RESPONSES(CODE_RESP),send_to_rs485);
+			  }
+		  }
+
+
+    osDelay(1);
+  }
+  /* USER CODE END 5 */
+}
+
+/* USER CODE BEGIN Header_LCD_Task */
+/**
+* @brief Function implementing the LCD thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_LCD_Task */
+void LCD_Task(void const * argument)
+{
+  /* USER CODE BEGIN LCD_Task */
+  /* Infinite loop */
+  for(;;)
+  {
+		if(strlen(print_lcd_row1) > 0)
+		{
+			  HD44780_SetCursor(0,0);
+			  HD44780_PrintStr(print_lcd_row1);
+			  memset((void*)print_lcd_row1, 0, sizeof(print_lcd_row1));
+		}
+		else
+		{
+			HD44780_Clear();
+			sprintf(print_lcd_row1, "%0.1f\t %dKPa %d", temperature, (int)pressure/1000, (int)count_touch);
+			HD44780_PrintStr(print_lcd_row1);
+		}
+		if(strlen(print_lcd_row2) > 0)
+		{
+			  HD44780_SetCursor(0,1);
+			  HD44780_PrintStr(print_lcd_row2);
+		}
+
+    osDelay(1);
+  }
+  /* USER CODE END LCD_Task */
+}
+
+/* USER CODE BEGIN Header_Temp_Task */
+/**
+* @brief Function implementing the ReadTempTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Temp_Task */
+void Temp_Task(void const * argument)
+{
+  /* USER CODE BEGIN Temp_Task */
+  /* Infinite loop */
+  for(;;)
+  {
+	  temperature = BMP180_GetTemperature();
+    osDelay(1);
+  }
+  /* USER CODE END Temp_Task */
+}
+
+/* USER CODE BEGIN Header_Press_Task */
+/**
+* @brief Function implementing the ReadPressTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Press_Task */
+void Press_Task(void const * argument)
+{
+  /* USER CODE BEGIN Press_Task */
+  /* Infinite loop */
+  for(;;)
+  {
+	  pressure = BMP180_GetPressure();
+    osDelay(1);
+  }
+  /* USER CODE END Press_Task */
+}
+
+/* USER CODE BEGIN Header_Key_Task */
+/**
+* @brief Function implementing the KeyTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Key_Task */
+void Key_Task(void const * argument)
+{
+  /* USER CODE BEGIN Key_Task */
+  /* Infinite loop */
+	char key_board[20];
+	uint8_t len_key_board = 0;
+	uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+  for(;;)
+  {
+	  new_touch = touched();
+	  if(new_touch != last_touch)
+	  {
+		  if(new_touch == 0)
+		  {
+			  char C = convert_to_char(last_touch);
+			  if(C != '\0' && C != '*' && C != '#')
+			  {
+				  if(len_key_board < 16)
+				  {
+					  key_board[len_key_board++] = C;
+					  key_board[len_key_board] = '\0';
+				  }
+				  else
+				  {
+					  memmove(key_board,&key_board[1],sizeof(key_board) - 1);
+					  key_board[len_key_board - 1] = C;
+					  key_board[len_key_board] = '\0';
+				  }
+			  }
+			  else if(C == '#' && len_key_board > 0)
+			  {
+//				  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+//				  memcpy((void*)print_lcd_row2, (void*)indicate_1, sizeof(indicate_1));
+//				  memcpy((void*)send_to_rs485, (void*)key_board, strlen(key_board));
+//				  gen_data_send_rs485(UPGRADE(CODE_KEY),send_to_rs485);
+//				  memset((void*)key_board, 0, sizeof(key_board));
+//				  len_key_board = 0;
+			  }
+			  else if(C == '*' && len_key_board > 0)
+			  {
+//				  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+//				  key_board[--len_key_board] = '\0';
+//				  memcpy((void*)print_lcd_row2, (void*)key_board, len_key_board);
+			  }
+			  if(C != '\0' && len_key_board > 0 && C != '#')
+			  {
+//				  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+//				  memcpy((void*)print_lcd_row2, (void*)key_board, strlen(key_board));
+			  }
+		  }
+	  }
+	  last_touch = new_touch;
+
+    osDelay(1);
+  }
+  /* USER CODE END Key_Task */
+}
+
+/* USER CODE BEGIN Header_TX_Task */
+/**
+* @brief Function implementing the TXUARTTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_TX_Task */
+void TX_Task(void const * argument)
+{
+  /* USER CODE BEGIN TX_Task */
+  /* Infinite loop */
+  for(;;)
+  {
+
+		if(strlen(send_to_rs485) > 0)
+		{
+			  if(HAL_UART_Transmit(&huart1, (uint8_t *)&send_to_rs485, strlen(send_to_rs485) , 1000) == HAL_OK)
+			  {
+			  	  memset((void*)send_to_rs485, 0, sizeof(send_to_rs485));
+				  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+			  }
+		}
+		else if(last_send == 1)
+		{
+			  last_send = 1 - last_send;
+			  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+			  sprintf(send_to_rs485, "%.1fC", temperature);
+			  gen_data_send_rs485(UPGRADE(CODE_TEMP),send_to_rs485);
+			  HAL_UART_Transmit(&huart1, (uint8_t *)&send_to_rs485, strlen(send_to_rs485) , 1000);
+		}
+		else if(last_send == 0)
+		{
+		      last_send = 1 - last_send;
+			  memset((void*)send_to_rs485, 0, sizeof(send_to_rs485));
+			  sprintf(send_to_rs485, "%dPa", (int) pressure);
+			  gen_data_send_rs485(UPGRADE(CODE_PRES),send_to_rs485);
+			  HAL_UART_Transmit(&huart1, (uint8_t *)&send_to_rs485, strlen(send_to_rs485) , 1000);
+		}
+		memset((void*)send_to_rs485, 0, sizeof(send_to_rs485));
+
+    osDelay(1);
+  }
+  /* USER CODE END TX_Task */
+}
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM4 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM4) {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.
