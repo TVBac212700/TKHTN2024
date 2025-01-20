@@ -8,7 +8,7 @@
 #ifndef SRC_FUNTION_H_
 #define SRC_FUNTION_H_
 #define MAX_DATA_SIZE 256
-#define MY_ADDRESS 111
+
 typedef struct {
     uint8_t Start;     // Ký tự Start (dấu ':' đầu tiên)
     uint8_t Addr;      // Địa chỉ (Addr)
@@ -209,6 +209,7 @@ char convert_to_char(uint16_t num) {
 char* gen_data_send_rs485(uint8_t code, char data[])
 {
 	DataStruct result;
+	result.Start = 0x3A;
 	result.Addr = MY_ADDRESS;
 	result.Code = code;
 	result.Len = strlen(data);

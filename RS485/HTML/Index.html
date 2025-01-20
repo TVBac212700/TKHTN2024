@@ -36,10 +36,10 @@
         <label for="function_code">Chọn mã hàm:</label>
         <select id="function_code">
             <option value="1">Đọc dữ liệu</option>
-            <option value="2">Ghi dữ liệu</option>
+            <!-- <option value="2">Ghi dữ liệu</option> -->
+            <option value="2">Gửi thông báo</option>
             <option value="3">Kiểm tra trạng thái</option>
-            <option value="4">Khởi động lại</option>
-            <option value="5">Gửi thông báo</option>
+            <!-- <option value="4">Khởi động lại</option> -->
         </select>
 
         <label for="user_data">Nhập dữ liệu:</label>
@@ -47,23 +47,6 @@
 
         <button type="submit">Gửi dữ liệu</button>
     </form>
-    <h2>Bảng Dữ Liệu Cập Nhật</h2>
-    <table id="receiver-table">
-        <tr>
-            <th class="header-colspan" colspan="6">Dữ liệu nhận</th>
-            <th class="header-colspan" colspan="6">Giải Mã</th>
-        </tr>
-        <tr>
-            <th>Start</th>
-            <th>Address</th>
-            <th>Code</th>
-            <th>Data</th>
-            <th>CRC</th>
-            <th>Stop</th>
-            <th>Thuộc Tính </th>
-            <th>Giá Trị </th>
-        </tr>
-    </table>
     <h2>Bảng Dữ Liệu Gửi và Nhận</h2>
     <table id="data-table">
         <tr>
@@ -83,6 +66,23 @@
             <th>Data</th>
             <th>CRC</th>
             <th>Stop</th>
+        </tr>
+    </table>
+    <h2>Bảng Dữ Liệu Cập Nhật</h2>
+    <table id="receiver-table">
+        <tr>
+            <th class="header-colspan" colspan="6">Dữ liệu nhận</th>
+            <th class="header-colspan" colspan="6">Giải Mã</th>
+        </tr>
+        <tr>
+            <th>Start</th>
+            <th>Address</th>
+            <th>Code</th>
+            <th>Data</th>
+            <th>CRC</th>
+            <th>Stop</th>
+            <th>Thuộc Tính </th>
+            <th>Giá Trị </th>
         </tr>
     </table>
     <script>
