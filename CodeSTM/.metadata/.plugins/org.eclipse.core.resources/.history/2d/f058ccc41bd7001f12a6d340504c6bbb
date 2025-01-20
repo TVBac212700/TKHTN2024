@@ -309,10 +309,10 @@ int main(void)
 	  TaskTempBMP180();
 	  TaskPressBMP180();
 	  TaskLCD();
-	  unsigned long t1 = DWT->CYCCNT;
 	  TaskRX();
-	  unsigned long t2 = DWT->CYCCNT;
+	  unsigned long t1 = DWT->CYCCNT;
 	  TaskTX();
+	  unsigned long t2 = DWT->CYCCNT;
 	  unsigned long diff = (t2 - t1)/72;
 	  sprintf(send_to_rs485, "%d\n", (int) diff);
 	  HAL_UART_Transmit(&huart1, (uint8_t *)&send_to_rs485, strlen(send_to_rs485) , 1000);
