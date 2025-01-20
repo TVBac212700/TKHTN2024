@@ -671,3 +671,6 @@ java.io.FileNotFoundException: D:\TKHTN\TKHTN2024\CodeSTM\RoundRobin\Debug\Round
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-01-20 16:05:16.249
+!MESSAGE Indexed 'PriorityBasedSchedule' (22 sources, 115 headers) in 1.49 sec: 9,393 declarations; 44,910 references; 2 unresolved inclusions; 36 syntax errors; 188 unresolved names (0.35%)
