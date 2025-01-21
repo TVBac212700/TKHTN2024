@@ -2,10 +2,10 @@
 CAD.formats=
 CAD.pinconfig=
 CAD.provider=
-FREERTOS.FootprintOK=true
+FREERTOS.FootprintOK=false
 FREERTOS.IPParameters=Tasks01,copyHeapFile,configUSE_NEWLIB_REENTRANT,FootprintOK,configTOTAL_HEAP_SIZE,Mutexes01,configMAX_PRIORITIES,configGENERATE_RUN_TIME_STATS,configUSE_TRACE_FACILITY,configUSE_STATS_FORMATTING_FUNCTIONS,Queues01
 FREERTOS.Mutexes01=I2C_Bus,Dynamic,NULL,Available
-FREERTOS.Queues01=StringPrint,5,20,1,Dynamic,NULL,NULL;StringRS485,5,50,1,Dynamic,NULL,NULL
+FREERTOS.Queues01=StringPrint,10,20,1,Dynamic,NULL,NULL;StringRS485,510,50,1,Dynamic,NULL,NULL
 FREERTOS.Tasks01=RXUARTTask,1,512,RX_Task,Default,NULL,Dynamic,NULL,NULL;LCD,2,512,LCD_Task,Default,NULL,Dynamic,NULL,NULL;ReadTempTask,0,256,Temp_Task,Default,NULL,Dynamic,NULL,NULL;ReadPressTask,0,256,Press_Task,Default,NULL,Dynamic,NULL,NULL;KeyTask,3,512,Key_Task,Default,NULL,Dynamic,NULL,NULL;TXUARTTask,0,512,TX_Task,Default,NULL,Dynamic,NULL,NULL
 FREERTOS.configGENERATE_RUN_TIME_STATS=1
 FREERTOS.configMAX_PRIORITIES=7

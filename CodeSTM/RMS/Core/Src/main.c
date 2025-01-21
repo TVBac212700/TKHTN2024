@@ -182,11 +182,11 @@ int main(void)
 
   /* Create the queue(s) */
   /* definition and creation of StringPrint */
-  osMessageQDef(StringPrint, 5, 20);
+  osMessageQDef(StringPrint, 10, 20);
   StringPrintHandle = osMessageCreate(osMessageQ(StringPrint), NULL);
 
   /* definition and creation of StringRS485 */
-  osMessageQDef(StringRS485, 5, 50);
+  osMessageQDef(StringRS485, 510, 50);
   StringRS485Handle = osMessageCreate(osMessageQ(StringRS485), NULL);
 
   /* USER CODE BEGIN RTOS_QUEUES */
@@ -496,8 +496,8 @@ void RX_Task(void const * argument)
 				  osMessagePut(StringPrintHandle, (uint32_t)indicate_E, osWaitForever);
 			  }
 		  }
-		  UserDelayUntil(&GetTick,200);
-//		  osDelay(200);
+		  osDelay(20);
+		  UserDelayUntil(&GetTick,150);
   }
   /* USER CODE END 5 */
 }
