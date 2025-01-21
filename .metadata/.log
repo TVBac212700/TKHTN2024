@@ -1106,3 +1106,21 @@ java.io.FileNotFoundException: D:\File\Project\TKHTN2024\CodeSTM\RMS\Debug\RMS.e
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2025-01-21 18:52:13.506 -----------------------------------------------
+eclipse.buildId=Version 1.17.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\File\Project\TKHTN2024
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-01-21 18:53:03.303
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-01-21 18:53:03.359
+!MESSAGE Log4j2 initialized with config file D:\File\Project\TKHTN2024\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-01-21 18:53:33.572
+!MESSAGE Started RMI Server, listening on port 41338
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-01-21 18:54:31.627
+!MESSAGE The workspace will exit with unsaved changes in this session.
