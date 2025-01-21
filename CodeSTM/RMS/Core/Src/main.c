@@ -552,8 +552,8 @@ void Temp_Task(void const * argument)
 	    osMessagePut(StringPrintHandle, (uint32_t)sen_to_lcd, osWaitForever);
 	    sen_to_lcd[strlen(sen_to_lcd)+1] = UPGRADE(CODE_TEMP);
 	    osMessagePut(StringRS485Handle, (uint32_t)sen_to_lcd, osWaitForever);
-	    osDelay(5000);
-//	    UserDelayUntil(&GetTick,5000);
+//	    osDelay(5000);
+	    UserDelayUntil(&GetTick,5000);
   }
   /* USER CODE END Temp_Task */
 }
@@ -579,13 +579,14 @@ void Press_Task(void const * argument)
 	    	pressure = BMP180_GetPressure();
 	        osMutexRelease(I2C_BusHandle);
 	    }
+	    osDelay(2500);
 	    char sen_to_lcd[20];
 	    sprintf(sen_to_lcd,"%dPa", (int)pressure);
 	    osMessagePut(StringPrintHandle, (uint32_t)sen_to_lcd, osWaitForever);
 	    sen_to_lcd[strlen(sen_to_lcd)+1] = UPGRADE(CODE_PRES);
 	    osMessagePut(StringRS485Handle, (uint32_t)sen_to_lcd, osWaitForever);
-//	    UserDelayUntil(&GetTick,5000);
-	    osDelay(5000);
+	    UserDelayUntil(&GetTick,5000);
+//	    osDelay(2500);
 
   }
   /* USER CODE END Press_Task */

@@ -19,7 +19,7 @@
 ../Core/Src/main.c:495:6:LCD_Task	4
 ../Core/Src/main.c:537:6:Temp_Task	2
 ../Core/Src/main.c:568:6:Press_Task	2
-../Core/Src/main.c:601:6:Key_Task	12
-../Core/Src/main.c:668:6:TX_Task	3
-../Core/Src/main.c:704:6:HAL_TIM_PeriodElapsedCallback	2
-../Core/Src/main.c:721:6:Error_Handler	1
+../Core/Src/main.c:602:6:Key_Task	12
+../Core/Src/main.c:669:6:TX_Task	3
+../Core/Src/main.c:705:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:722:6:Error_Handler	1
