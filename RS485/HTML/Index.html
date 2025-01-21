@@ -54,6 +54,7 @@
             <th class="header-colspan" colspan="6">Dữ liệu nhận</th>
         </tr>
         <tr>
+            <th>Time</th>
             <th>Start</th>
             <th>Address</th>
             <th>Code</th>
@@ -75,6 +76,7 @@
             <th class="header-colspan" colspan="6">Giải Mã</th>
         </tr>
         <tr>
+            <th>Time</th>
             <th>Start</th>
             <th>Address</th>
             <th>Code</th>
@@ -87,6 +89,13 @@
     </table>
     <script>
         let isPortOpen = false;
+        function getCurrentTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0'); // Lấy giờ, thêm '0' nếu cần
+            const minutes = String(now.getMinutes()).padStart(2, '0'); // Lấy phút
+            const seconds = String(now.getSeconds()).padStart(2, '0'); // Lấy giây
+            return `${hours}:${minutes}:${seconds}`;
+}
 
         function togglePort() {
             const port = document.getElementById("port").value;
@@ -147,8 +156,9 @@ function addRowToLogTable(data) {
         const receiver = entry.receiver;
         
         // Tạo một hàng mới trong bảng
-        const newRow = table.insertRow();
+        const newRow = table.insertRow(2);
         newRow.style.backgroundColor = '#fffff0'
+        newRow.insertCell().textContent = getCurrentTime();
         // Thêm ô cho "Dữ liệu gửi"
         newRow.insertCell().textContent = send.start;
         newRow.insertCell().textContent = send.addr;
@@ -179,7 +189,7 @@ function addRowToDecodeTable(data) {
         const receiver = entry.receiver;
         
         // Tạo một hàng mới trong bảng
-        const newRow = table.insertRow();
+        const newRow = table.insertRow(2);
         
         // Thêm ô cho "Dữ liệu gửi"
         if(receiver.exac != true)
@@ -190,6 +200,7 @@ function addRowToDecodeTable(data) {
     {
         newRow.style.backgroundColor = '#fffff0'
     }
+        newRow.insertCell().textContent = getCurrentTime();
         newRow.insertCell().textContent = receiver.start;
         newRow.insertCell().textContent = receiver.addr;
         newRow.insertCell().textContent = receiver.code;

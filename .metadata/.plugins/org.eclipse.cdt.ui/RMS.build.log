@@ -1,10 +1,30 @@
-22:37:15 **** Incremental Build of configuration Debug for project RMS ****
+10:41:08 **** Incremental Build of configuration Debug for project RMS ****
 make -j8 all 
-arm-none-eabi-size  RMS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  42400	    612	  19796	  62808	   f558	RMS.elf
-Finished building: default.size.stdout
- 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:527:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  527 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:551:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  551 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:579:14: warning: unused variable 'send_to_rs485' [-Wunused-variable]
+  579 |         char send_to_rs485[50];
+      |              ^~~~~~~~~~~~~
+../Core/Src/main.c:578:17: warning: unused variable 'event' [-Wunused-variable]
+  578 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:577:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  577 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.15.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: RMS.elf section `.bss' will not fit in region `RAM'
+C:/ST/STM32CubeIDE_1.15.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: region `RAM' overflowed by 3368 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: RMS.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
 
-22:37:16 Build Finished. 0 errors, 0 warnings. (took 777ms)
+10:41:11 Build Failed. 3 errors, 5 warnings. (took 3s.166ms)
 

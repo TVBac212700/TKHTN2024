@@ -59,11 +59,14 @@ I2C_HandleTypeDef hi2c1;
 UART_HandleTypeDef huart1;
 
 osThreadId RXUARTTaskHandle;
-osThreadId LCDTaskHandle;
+osThreadId LCDHandle;
 osThreadId ReadTempTaskHandle;
 osThreadId ReadPressTaskHandle;
 osThreadId KeyTaskHandle;
 osThreadId TXUARTTaskHandle;
+osMessageQId StringPrintHandle;
+osMessageQId StringRS485Handle;
+osMutexId I2C_BusHandle;
 /* USER CODE BEGIN PV */
 char print_lcd_row1[30];
 char print_lcd_row2[30];
@@ -75,11 +78,11 @@ char indicate_P[] = "Send Pressure";
 char indicate_C[] = "Send Count";
 char indicate_M[] = "Send Status";
 char indicate_E[] = "CRC Error";
-char key_board[20];
+//char key_board[20];
 float temperature;
 int32_t pressure;
-uint8_t len_key_board = 0, last_send = 0;
-uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+//uint8_t len_key_board = 0, last_send = 0;
+uint16_t count_touch = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -87,12 +90,12 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_USART1_UART_Init(void);
-void StartDefaultTask(void const * argument);
-void StartTask02(void const * argument);
-void StartTask03(void const * argument);
-void StartTask04(void const * argument);
-void StartTask05(void const * argument);
-void StartTask06(void const * argument);
+void RX_Task(void const * argument);
+void LCD_Task(void const * argument);
+void Temp_Task(void const * argument);
+void Press_Task(void const * argument);
+void Key_Task(void const * argument);
+void TX_Task(void const * argument);
 
 /* USER CODE BEGIN PFP */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
@@ -100,182 +103,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void TaskMPR121()
-{
-	  new_touch = touched();
-	  if(new_touch != last_touch)
-	  {
-		  if(new_touch == 0)
-		  {
-			  char C = convert_to_char(last_touch);
-			  if(C != '\0' && C != '*' && C != '#')
-			  {
-				  if(len_key_board < 16)
-				  {
-					  key_board[len_key_board++] = C;
-					  key_board[len_key_board] = '\0';
-				  }
-				  else
-				  {
-					  memmove(key_board,&key_board[1],sizeof(key_board) - 1);
-					  key_board[len_key_board - 1] = C;
-					  key_board[len_key_board] = '\0';
-				  }
-			  }
-			  else if(C == '#' && len_key_board > 0)
-			  {
-				  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
-				  memcpy((void*)print_lcd_row2, (void*)indicate_1, sizeof(indicate_1));
-				  memcpy((void*)send_to_rs485, (void*)key_board, strlen(key_board));
-				  gen_data_send_rs485(UPGRADE(CODE_KEY),send_to_rs485);
-				  memset((void*)key_board, 0, sizeof(key_board));
-				  len_key_board = 0;
-			  }
-			  else if(C == '*' && len_key_board > 0)
-			  {
-				  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
-				  key_board[--len_key_board] = '\0';
-				  memcpy((void*)print_lcd_row2, (void*)key_board, len_key_board);
-			  }
-			  if(C != '\0' && len_key_board > 0 && C != '#')
-			  {
-				  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
-				  memcpy((void*)print_lcd_row2, (void*)key_board, strlen(key_board));
-			  }
-		  }
-	  }
-	  last_touch = new_touch;
-}
 
-void TaskTempBMP180()
-{
-	temperature = BMP180_GetTemperature();
-}
-
-void TaskPressBMP180()
-{
-	pressure = BMP180_GetPressure();
-}
-
-void TaskLCD()
-{
-	if(strlen(print_lcd_row1) > 0)
-	{
-		  HD44780_SetCursor(0,0);
-		  HD44780_PrintStr(print_lcd_row1);
-		  memset((void*)print_lcd_row1, 0, sizeof(print_lcd_row1));
-	}
-	else
-	{
-		HD44780_Clear();
-		sprintf(print_lcd_row1, "%0.1f\t %dKPa %d", temperature, (int)pressure/1000, (int)count_touch);
-		HD44780_PrintStr(print_lcd_row1);
-	}
-	if(strlen(print_lcd_row2) > 0)
-	{
-		  HD44780_SetCursor(0,1);
-		  HD44780_PrintStr(print_lcd_row2);
-	}
-}
-
-void TaskRX()
-{
-	memset((void*)read_to_rs485,0,sizeof(read_to_rs485));
-	HAL_UART_Receive(&huart1, (uint8_t *)&read_to_rs485, sizeof (read_to_rs485) , 500);
-	  if(strlen(read_to_rs485) > 1)
-	  {
-		  DataStruct result;
-		  parse_data(read_to_rs485,&result);
-		  if(result.Addr == MY_ADDRESS && check_crc(&result) == result.Crc)
-		  {
-			  if(result.Code == 1)
-			  {
-				  if(result.Data[0] == '1')
-				  {
-					  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
-					  sprintf(send_to_rs485, "%.1fC", temperature);
-					  gen_data_send_rs485(RESPONSES(CODE_TEMP),send_to_rs485);
-					  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
-					  memcpy((void*)print_lcd_row2, (void*)indicate_T, sizeof(indicate_T));
-
-				  }
-				  else if (result.Data[0] == '2')
-				  {
-					  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
-					  sprintf(send_to_rs485, "%dPa", (int) pressure);
-					  gen_data_send_rs485(RESPONSES(CODE_PRES),send_to_rs485);
-					  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
-					  memcpy((void*)print_lcd_row2, (void*)indicate_P, sizeof(indicate_P));
-
-				  }
-				  else if (result.Data[0] == '4')
-				  {
-					  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
-					  sprintf(send_to_rs485, "%dN", (int) count_touch);
-					  gen_data_send_rs485(RESPONSES(CODE_COUNT),send_to_rs485);
-					  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
-					  memcpy((void*)print_lcd_row2, (void*)indicate_C, sizeof(indicate_C));
-				  }
-			  }
-			  else if(result.Code == 2)
-			  {
-				  result.Data[result.Len] = '\0';
-				  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
-				  memcpy((void*)print_lcd_row2, (void*)(char*)result.Data, strlen((char*)result.Data));
-				  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
-				  sprintf(send_to_rs485, "Okee");
-				  gen_data_send_rs485(RESPONSES(CODE_RESP),send_to_rs485);
-			  }
-			  else if(result.Code == 3)
-			  {
-				  result.Data[result.Len] = '\0';
-				  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
-				  memcpy((void*)print_lcd_row2, (void*)indicate_M, sizeof(indicate_M));
-				  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
-				  sprintf(send_to_rs485, "Okee");
-				  gen_data_send_rs485(RESPONSES(CODE_RESP),send_to_rs485);
-			  }
-		  }
-		  else if(check_crc(&result) != result.Crc)
-		  {
-			  result.Data[result.Len] = '\0';
-			  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
-			  memcpy((void*)print_lcd_row2, (void*)indicate_E, sizeof(indicate_E));
-			  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
-			  sprintf(send_to_rs485, "Error Crc");
-			  gen_data_send_rs485(RESPONSES(CODE_RESP),send_to_rs485);
-		  }
-	  }
-}
-
-void TaskTX()
-{
-	if(strlen(send_to_rs485) > 0)
-	{
-		  if(HAL_UART_Transmit(&huart1, (uint8_t *)&send_to_rs485, strlen(send_to_rs485) , 1000) == HAL_OK)
-		  {
-		  	  memset((void*)send_to_rs485, 0, sizeof(send_to_rs485));
-			  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-		  }
-	}
-	else if(last_send == 1)
-	{
-		  last_send = 1 - last_send;
-		  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
-		  sprintf(send_to_rs485, "%.1fC", temperature);
-		  gen_data_send_rs485(UPGRADE(CODE_TEMP),send_to_rs485);
-		  HAL_UART_Transmit(&huart1, (uint8_t *)&send_to_rs485, strlen(send_to_rs485) , 1000);
-	}
-	else if(last_send == 0)
-	{
-	      last_send = 1 - last_send;
-		  memset((void*)send_to_rs485, 0, sizeof(send_to_rs485));
-		  sprintf(send_to_rs485, "%dPa", (int) pressure);
-		  gen_data_send_rs485(UPGRADE(CODE_PRES),send_to_rs485);
-		  HAL_UART_Transmit(&huart1, (uint8_t *)&send_to_rs485, strlen(send_to_rs485) , 1000);
-	}
-	memset((void*)send_to_rs485, 0, sizeof(send_to_rs485));
-}
 /* USER CODE END 0 */
 
 /**
@@ -322,6 +150,11 @@ int main(void)
 
   /* USER CODE END 2 */
 
+  /* Create the mutex(es) */
+  /* definition and creation of I2C_Bus */
+  osMutexDef(I2C_Bus);
+  I2C_BusHandle = osMutexCreate(osMutex(I2C_Bus));
+
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
@@ -334,33 +167,42 @@ int main(void)
   /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
 
+  /* Create the queue(s) */
+  /* definition and creation of StringPrint */
+  osMessageQDef(StringPrint, 5, 20);
+  StringPrintHandle = osMessageCreate(osMessageQ(StringPrint), NULL);
+
+  /* definition and creation of StringRS485 */
+  osMessageQDef(StringRS485, 5, 50);
+  StringRS485Handle = osMessageCreate(osMessageQ(StringRS485), NULL);
+
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
   /* definition and creation of RXUARTTask */
-  osThreadDef(RXUARTTask, StartDefaultTask, osPriorityNormal, 0, 128);
+  osThreadDef(RXUARTTask, RX_Task, osPriorityAboveNormal, 0, 512);
   RXUARTTaskHandle = osThreadCreate(osThread(RXUARTTask), NULL);
 
-  /* definition and creation of LCDTask */
-  osThreadDef(LCDTask, StartTask02, osPriorityIdle, 0, 128);
-  LCDTaskHandle = osThreadCreate(osThread(LCDTask), NULL);
+  /* definition and creation of LCD */
+  osThreadDef(LCD, LCD_Task, osPriorityHigh, 0, 512);
+  LCDHandle = osThreadCreate(osThread(LCD), NULL);
 
   /* definition and creation of ReadTempTask */
-  osThreadDef(ReadTempTask, StartTask03, osPriorityNormal, 0, 128);
+  osThreadDef(ReadTempTask, Temp_Task, osPriorityNormal, 0, 512);
   ReadTempTaskHandle = osThreadCreate(osThread(ReadTempTask), NULL);
 
   /* definition and creation of ReadPressTask */
-  osThreadDef(ReadPressTask, StartTask04, osPriorityNormal, 0, 128);
+  osThreadDef(ReadPressTask, Press_Task, osPriorityNormal, 0, 512);
   ReadPressTaskHandle = osThreadCreate(osThread(ReadPressTask), NULL);
 
   /* definition and creation of KeyTask */
-  osThreadDef(KeyTask, StartTask05, osPriorityNormal, 0, 128);
+  osThreadDef(KeyTask, Key_Task, osPriorityRealtime, 0, 1024);
   KeyTaskHandle = osThreadCreate(osThread(KeyTask), NULL);
 
   /* definition and creation of TXUARTTask */
-  osThreadDef(TXUARTTask, StartTask06, osPriorityNormal, 0, 128);
+  osThreadDef(TXUARTTask, TX_Task, osPriorityNormal, 0, 512);
   TXUARTTaskHandle = osThreadCreate(osThread(TXUARTTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -379,12 +221,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  TaskMPR121();
-	  TaskTempBMP180();
-	  TaskPressBMP180();
-	  TaskLCD();
-	  TaskRX();
-	  TaskTX();
   }
   /* USER CODE END 3 */
 }
@@ -549,112 +385,319 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 /* USER CODE END 4 */
 
-/* USER CODE BEGIN Header_StartDefaultTask */
+/* USER CODE BEGIN Header_RX_Task */
 /**
-  * @brief  Function implementing the defaultTask thread.
+  * @brief  Function implementing the RXUARTTask thread.
   * @param  argument: Not used
   * @retval None
   */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void const * argument)
+/* USER CODE END Header_RX_Task */
+void RX_Task(void const * argument)
 {
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+
+//		memset((void*)read_to_rs485,0,sizeof(read_to_rs485));
+//		HAL_UART_Receive(&huart1, (uint8_t *)&read_to_rs485, sizeof (read_to_rs485) , 500);
+//		  if(strlen(read_to_rs485) > 1)
+//		  {
+//			  DataStruct result;
+//			  parse_data(read_to_rs485,&result);
+//			  if(result.Addr == MY_ADDRESS && check_crc(&result) == result.Crc)
+//			  {
+//				  if(result.Code == 1)
+//				  {
+//					  if(result.Data[0] == '1')
+//					  {
+//						  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+//						  sprintf(send_to_rs485, "%.1fC", temperature);
+//						  gen_data_send_rs485(RESPONSES(CODE_TEMP),send_to_rs485);
+//						  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+//						  memcpy((void*)print_lcd_row2, (void*)indicate_T, sizeof(indicate_T));
+//
+//					  }
+//					  else if (result.Data[0] == '2')
+//					  {
+//						  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+//						  sprintf(send_to_rs485, "%dPa", (int) pressure);
+//						  gen_data_send_rs485(RESPONSES(CODE_PRES),send_to_rs485);
+//						  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+//						  memcpy((void*)print_lcd_row2, (void*)indicate_P, sizeof(indicate_P));
+//
+//					  }
+//					  else if (result.Data[0] == '4')
+//					  {
+//						  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+//						  sprintf(send_to_rs485, "%dN", (int) count_touch);
+//						  gen_data_send_rs485(RESPONSES(CODE_COUNT),send_to_rs485);
+//						  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+//						  memcpy((void*)print_lcd_row2, (void*)indicate_C, sizeof(indicate_C));
+//					  }
+//				  }
+//				  else if(result.Code == 2)
+//				  {
+//					  result.Data[result.Len] = '\0';
+//					  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+//					  memcpy((void*)print_lcd_row2, (void*)(char*)result.Data, strlen((char*)result.Data));
+//					  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+//					  sprintf(send_to_rs485, "Okee");
+//					  gen_data_send_rs485(RESPONSES(CODE_RESP),send_to_rs485);
+//				  }
+//				  else if(result.Code == 3)
+//				  {
+//					  result.Data[result.Len] = '\0';
+//					  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+//					  memcpy((void*)print_lcd_row2, (void*)indicate_M, sizeof(indicate_M));
+//					  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+//					  sprintf(send_to_rs485, "Okee");
+//					  gen_data_send_rs485(RESPONSES(CODE_RESP),send_to_rs485);
+//				  }
+//			  }
+//			  else if(check_crc(&result) != result.Crc)
+//			  {
+//				  result.Data[result.Len] = '\0';
+//				  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+//				  memcpy((void*)print_lcd_row2, (void*)indicate_E, sizeof(indicate_E));
+//				  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+//				  sprintf(send_to_rs485, "Error Crc");
+//				  gen_data_send_rs485(RESPONSES(CODE_RESP),send_to_rs485);
+//			  }
+//		  }
+//
+
+    osDelay(2000);
   }
   /* USER CODE END 5 */
 }
 
-/* USER CODE BEGIN Header_StartTask02 */
+/* USER CODE BEGIN Header_LCD_Task */
 /**
-* @brief Function implementing the LCDTask thread.
+* @brief Function implementing the LCD thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask02 */
-void StartTask02(void const * argument)
+/* USER CODE END Header_LCD_Task */
+void LCD_Task(void const * argument)
 {
-  /* USER CODE BEGIN StartTask02 */
+  /* USER CODE BEGIN LCD_Task */
   /* Infinite loop */
+	  osEvent event;
+	  char LastMessage[20] = "Init LCD 1602";
+	  char *receivedMessage = NULL;
   for(;;)
   {
-    osDelay(1);
+	  if(receivedMessage != NULL)
+	  {
+		  memcpy(LastMessage, receivedMessage, strlen(receivedMessage));
+	  }
+	  event = osMessageGet(StringPrintHandle, osWaitForever);
+	  if (event.status == osEventMessage)
+	  {
+		  receivedMessage = (char*)event.value.v;
+		  if (osMutexWait(I2C_BusHandle, osWaitForever) == osOK)
+		  {
+
+			HD44780_Clear();
+	        HD44780_SetCursor(0,0);
+			HD44780_PrintStr(LastMessage);
+			HD44780_SetCursor(0,1);
+			HD44780_PrintStr(receivedMessage);
+	        osMutexRelease(I2C_BusHandle);
+		  }
+	  }
+	  osDelay(500);
   }
-  /* USER CODE END StartTask02 */
+  /* USER CODE END LCD_Task */
 }
 
-/* USER CODE BEGIN Header_StartTask03 */
+/* USER CODE BEGIN Header_Temp_Task */
 /**
 * @brief Function implementing the ReadTempTask thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask03 */
-void StartTask03(void const * argument)
+/* USER CODE END Header_Temp_Task */
+void Temp_Task(void const * argument)
 {
-  /* USER CODE BEGIN StartTask03 */
+  /* USER CODE BEGIN Temp_Task */
   /* Infinite loop */
+	float temperature;
   for(;;)
   {
-    osDelay(1);
+	    if (osMutexWait(I2C_BusHandle, osWaitForever) == osOK)
+	    {
+	    	temperature = BMP180_GetTemperature();
+	        osMutexRelease(I2C_BusHandle);
+	    }
+	    osDelay(500);
   }
-  /* USER CODE END StartTask03 */
+  /* USER CODE END Temp_Task */
 }
 
-/* USER CODE BEGIN Header_StartTask04 */
+/* USER CODE BEGIN Header_Press_Task */
 /**
 * @brief Function implementing the ReadPressTask thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask04 */
-void StartTask04(void const * argument)
+/* USER CODE END Header_Press_Task */
+void Press_Task(void const * argument)
 {
-  /* USER CODE BEGIN StartTask04 */
+  /* USER CODE BEGIN Press_Task */
   /* Infinite loop */
+	int32_t pressure;
   for(;;)
   {
-    osDelay(1);
+	    if (osMutexWait(I2C_BusHandle, osWaitForever) == osOK)
+	    {
+	    	pressure = BMP180_GetPressure();
+	        osMutexRelease(I2C_BusHandle);
+	    }
+	    osDelay(500);
   }
-  /* USER CODE END StartTask04 */
+  /* USER CODE END Press_Task */
 }
 
-/* USER CODE BEGIN Header_StartTask05 */
+/* USER CODE BEGIN Header_Key_Task */
 /**
 * @brief Function implementing the KeyTask thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask05 */
-void StartTask05(void const * argument)
+/* USER CODE END Header_Key_Task */
+void Key_Task(void const * argument)
 {
-  /* USER CODE BEGIN StartTask05 */
+  /* USER CODE BEGIN Key_Task */
   /* Infinite loop */
+	char key_board[20];
+	uint8_t len_key_board = 0;
+	uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+	osEvent event;
   for(;;)
   {
-    osDelay(1);
+		if (osMutexWait(I2C_BusHandle, osWaitForever) == osOK)
+		{
+			new_touch = touched();
+			osMutexRelease(I2C_BusHandle);
+		}
+	  if(new_touch != last_touch)
+	  {
+	    	char data_send_lcd[20];
+			convertTo12BitBinaryString(new_touch, data_send_lcd);
+
+	        if (osMessagePut(StringPrintHandle, (uint32_t)data_send_lcd, osWaitForever) != osOK) {
+//	            printf("Failed to send message!\n");
+	        	HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+//	        	memset((void*)data_send_lcd,0,20);
+	        }
+	        char data_send_rs485[50];
+	        memcpy(data_send_rs485, data_send_lcd, sizeof(data_send_lcd));
+	        gen_data_send_rs485(UPGRADE(CODE_KEY),data_send_rs485);
+	        osMessagePut(StringRS485Handle, (uint32_t)data_send_rs485, osWaitForever);
+//	        char data_send_rs485[50];
+//	        convertTo12BitBinaryString(new_touch, data_send_rs485);
+		  if(new_touch == 0)
+		  {
+			  char C = convert_to_char(last_touch);
+			  if(C != '\0' && C != '*' && C != '#')
+			  {
+				  if(len_key_board < 16)
+				  {
+					  key_board[len_key_board++] = C;
+					  key_board[len_key_board] = '\0';
+				  }
+				  else
+				  {
+					  memmove(key_board,&key_board[1],sizeof(key_board) - 1);
+					  key_board[len_key_board - 1] = C;
+					  key_board[len_key_board] = '\0';
+				  }
+			  }
+			  else if(C == '#' && len_key_board > 0)
+			  {
+//				  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+//				  memcpy((void*)print_lcd_row2, (void*)indicate_1, sizeof(indicate_1));
+//				  memcpy((void*)send_to_rs485, (void*)key_board, strlen(key_board));
+//				  gen_data_send_rs485(UPGRADE(CODE_KEY),send_to_rs485);
+//				  memset((void*)key_board, 0, sizeof(key_board));
+//				  len_key_board = 0;
+			  }
+			  else if(C == '*' && len_key_board > 0)
+			  {
+//				  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+//				  key_board[--len_key_board] = '\0';
+//				  memcpy((void*)print_lcd_row2, (void*)key_board, len_key_board);
+			  }
+			  if(C != '\0' && len_key_board > 0 && C != '#')
+			  {
+//				  memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+//				  memcpy((void*)print_lcd_row2, (void*)key_board, strlen(key_board));
+			  }
+		  }
+	  }
+	  last_touch = new_touch;
+
+    osDelay(100);
   }
-  /* USER CODE END StartTask05 */
+  /* USER CODE END Key_Task */
 }
 
-/* USER CODE BEGIN Header_StartTask06 */
+/* USER CODE BEGIN Header_TX_Task */
 /**
 * @brief Function implementing the TXUARTTask thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask06 */
-void StartTask06(void const * argument)
+/* USER CODE END Header_TX_Task */
+void TX_Task(void const * argument)
 {
-  /* USER CODE BEGIN StartTask06 */
+  /* USER CODE BEGIN TX_Task */
   /* Infinite loop */
+	char *receivedMessageTX = NULL;
+	osEvent event;
   for(;;)
   {
-    osDelay(1);
+	  event = osMessageGet(StringRS485Handle, osWaitForever);
+	  if (event.status == osEventMessage) {
+		  receivedMessageTX = (char*)event.value.v;
+		  			  if(HAL_UART_Transmit(&huart1, (uint8_t *)receivedMessageTX, strlen(receivedMessageTX) , 1000) == HAL_OK)
+		  			  {
+//		  			  	  memset((void*)send_to_rs485, 0, sizeof(send_to_rs485));
+		  				  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+		  			  }
+
+	  }
+//		if(strlen(send_to_rs485) > 0)
+//		{
+//			  if(HAL_UART_Transmit(&huart1, (uint8_t *)&send_to_rs485, strlen(send_to_rs485) , 1000) == HAL_OK)
+//			  {
+//			  	  memset((void*)send_to_rs485, 0, sizeof(send_to_rs485));
+//				  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+//			  }
+//		}
+//		else if(last_send == 1)
+//		{
+//			  last_send = 1 - last_send;
+//			  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+//			  sprintf(send_to_rs485, "%.1fC", temperature);
+//			  gen_data_send_rs485(UPGRADE(CODE_TEMP),send_to_rs485);
+//			  HAL_UART_Transmit(&huart1, (uint8_t *)&send_to_rs485, strlen(send_to_rs485) , 1000);
+//		}
+//		else if(last_send == 0)
+//		{
+//		      last_send = 1 - last_send;
+//			  memset((void*)send_to_rs485, 0, sizeof(send_to_rs485));
+//			  sprintf(send_to_rs485, "%dPa", (int) pressure);
+//			  gen_data_send_rs485(UPGRADE(CODE_PRES),send_to_rs485);
+//			  HAL_UART_Transmit(&huart1, (uint8_t *)&send_to_rs485, strlen(send_to_rs485) , 1000);
+//		}
+//		memset((void*)send_to_rs485, 0, sizeof(send_to_rs485));
+
+    osDelay(500);
   }
-  /* USER CODE END StartTask06 */
+  /* USER CODE END TX_Task */
 }
 
 /**

@@ -1,17 +1,10 @@
-21:32:17 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
+08:28:43 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
- 
 arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
    text	   data	    bss	    dec	    hex	filename
   35016	    608	   2296	  37920	   9420	PriorityBasedSchedule.elf
 Finished building: default.size.stdout
  
-Finished building: PriorityBasedSchedule.list
- 
 
-21:32:20 Build Finished. 0 errors, 0 warnings. (took 2s.659ms)
+08:28:43 Build Finished. 0 errors, 0 warnings. (took 434ms)
 

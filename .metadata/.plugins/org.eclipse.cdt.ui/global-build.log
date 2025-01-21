@@ -1,31 +1,4 @@
-22:28:40 **** Incremental Build of configuration Debug for project RMS ****
-make -j8 all 
-arm-none-eabi-size  RMS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  32112	    236	  19788	  52136	   cba8	RMS.elf
-Finished building: default.size.stdout
- 
-22:30:00 **** Incremental Build of configuration Debug for project RMS ****
-make -j8 all 
-arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: RMS.elf
- 
-arm-none-eabi-size  RMS.elf 
-arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
-   text	   data	    bss	    dec	    hex	filename
-  42400	    612	  19796	  62808	   f558	RMS.elf
-Finished building: default.size.stdout
- 
-Finished building: RMS.list
- 
-22:31:41 **** Incremental Build of configuration Debug for project RMS ****
-make -j8 all 
-arm-none-eabi-size  RMS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  42400	    612	  19796	  62808	   f558	RMS.elf
-Finished building: default.size.stdout
- 
-22:34:35 **** Incremental Build of configuration Debug for project RMS ****
+00:26:43 **** Incremental Build of configuration Debug for project RMS ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -34,15 +7,1296 @@ Finished building target: RMS.elf
 arm-none-eabi-size  RMS.elf 
 arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
    text	   data	    bss	    dec	    hex	filename
-  42400	    612	  19796	  62808	   f558	RMS.elf
+  44144	    524	  19716	  64384	   fb80	RMS.elf
 Finished building: default.size.stdout
  
 Finished building: RMS.list
  
-22:37:15 **** Incremental Build of configuration Debug for project RMS ****
+00:26:48 **** Incremental Build of configuration Debug for project RMS ****
 make -j8 all 
 arm-none-eabi-size  RMS.elf 
    text	   data	    bss	    dec	    hex	filename
-  42400	    612	  19796	  62808	   f558	RMS.elf
+  44144	    524	  19716	  64384	   fb80	RMS.elf
 Finished building: default.size.stdout
  
+00:28:43 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  44144	    524	  19716	  64384	   fb80	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+00:33:49 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  44144	    524	  19716	  64384	   fb80	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+00:34:18 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  44144	    524	  19716	  64384	   fb80	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+00:45:37 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  45344	    524	  19716	  65584	  10030	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+00:55:18 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  46156	    524	  19692	  66372	  10344	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+00:56:48 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  46156	    524	  19692	  66372	  10344	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+00:57:27 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-size  RMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46156	    524	  19692	  66372	  10344	RMS.elf
+Finished building: default.size.stdout
+ 
+00:58:35 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  46156	    524	  19692	  66372	  10344	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+00:59:58 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-size  RMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46156	    524	  19692	  66372	  10344	RMS.elf
+Finished building: default.size.stdout
+ 
+01:00:52 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-size  RMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46156	    524	  19692	  66372	  10344	RMS.elf
+Finished building: default.size.stdout
+ 
+01:01:50 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-size  RMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46156	    524	  19692	  66372	  10344	RMS.elf
+Finished building: default.size.stdout
+ 
+01:02:47 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-size  RMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46156	    524	  19692	  66372	  10344	RMS.elf
+Finished building: default.size.stdout
+ 
+08:04:57 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-size  RMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46156	    524	  19692	  66372	  10344	RMS.elf
+Finished building: default.size.stdout
+ 
+08:06:10 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-size  RMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46156	    524	  19692	  66372	  10344	RMS.elf
+Finished building: default.size.stdout
+ 
+08:11:53 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'TX_Task':
+../Core/Src/main.c:665:15: warning: variable 'receivedMessage' set but not used [-Wunused-but-set-variable]
+  665 |         char *receivedMessage;
+      |               ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  45408	    524	  19724	  65656	  10078	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+08:14:09 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  45344	    524	  19716	  65584	  10030	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+08:16:13 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  45344	    524	  19716	  65584	  10030	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+08:20:18 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
+make -j8 all 
+arm-none-eabi-size  PriorityBasedSchedule.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35016	    608	   2296	  37920	   9420	PriorityBasedSchedule.elf
+Finished building: default.size.stdout
+ 
+08:21:06 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PriorityBasedSchedule.elf
+ 
+arm-none-eabi-size  PriorityBasedSchedule.elf 
+arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
+   text	   data	    bss	    dec	    hex	filename
+  35016	    608	   2296	  37920	   9420	PriorityBasedSchedule.elf
+Finished building: default.size.stdout
+ 
+Finished building: PriorityBasedSchedule.list
+ 
+08:23:22 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
+make -j8 all 
+arm-none-eabi-size  PriorityBasedSchedule.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35016	    608	   2296	  37920	   9420	PriorityBasedSchedule.elf
+Finished building: default.size.stdout
+ 
+08:25:01 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
+make -j8 all 
+arm-none-eabi-size  PriorityBasedSchedule.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35016	    608	   2296	  37920	   9420	PriorityBasedSchedule.elf
+Finished building: default.size.stdout
+ 
+08:28:43 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
+make -j8 all 
+arm-none-eabi-size  PriorityBasedSchedule.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35016	    608	   2296	  37920	   9420	PriorityBasedSchedule.elf
+Finished building: default.size.stdout
+ 
+08:29:32 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-size  RMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  45344	    524	  19716	  65584	  10030	RMS.elf
+Finished building: default.size.stdout
+ 
+08:36:44 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  45376	    524	  19692	  65592	  10038	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+08:40:14 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'LCD_Task':
+../Core/Src/main.c:499:13: warning: 'receivedMessage' is used uninitialized [-Wuninitialized]
+  499 |           if(receivedMessage)
+      |             ^
+../Core/Src/main.c:488:17: note: 'receivedMessage' was declared here
+  488 |           char *receivedMessage;
+      |                 ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  44524	    524	  19660	  64708	   fcc4	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+08:42:39 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  44540	    524	  19660	  64724	   fcd4	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+08:43:36 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:601:22: warning: unused variable 'data_send' [-Wunused-variable]
+  601 |                 char data_send[20];
+      |                      ^~~~~~~~~
+../Core/Src/main.c:607:79: error: 'data_send' undeclared (first use in this function); did you mean 'last_send'?
+  607 |                                         convertTo12BitBinaryString(new_touch, data_send);
+      |                                                                               ^~~~~~~~~
+      |                                                                               last_send
+../Core/Src/main.c:607:79: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:43:53 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  44540	    524	  19660	  64724	   fcd4	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+08:58:40 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'TX_Task':
+../Core/Src/main.c:675:11: error: 'event' undeclared (first use in this function); did you mean 'osEvent'?
+  675 |           event = osMessageGet(StringRS485Handle, osWaitForever);
+      |           ^~~~~
+      |           osEvent
+../Core/Src/main.c:675:11: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:59:05 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c: In function 'TX_Task':
+../Core/Src/main.c:676:11: error: 'event' undeclared (first use in this function); did you mean 'osEvent'?
+  676 |           event = osMessageGet(StringRS485Handle, osWaitForever);
+      |           ^~~~~
+      |           osEvent
+../Core/Src/main.c:676:11: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:59:16 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  46984	    524	  19660	  67168	  10660	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:04:16 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  46936	    524	  19660	  67120	  10630	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:05:28 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  46984	    524	  19660	  67168	  10660	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:09:50 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  46984	    524	  19660	  67168	  10660	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:13:30 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'LCD_Task':
+../Core/Src/main.c:499:30: warning: the comparison will always evaluate as 'true' for the address of 'receivedMessage' will never be NULL [-Waddress]
+  499 |           if(receivedMessage != NULL)
+      |                              ^~
+../Core/Src/main.c:488:16: note: 'receivedMessage' declared here
+  488 |           char receivedMessage[20];
+      |                ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:599:17: warning: unused variable 'event' [-Wunused-variable]
+  599 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c: In function 'LCD_Task':
+../Core/Src/main.c:507:23: warning: 'memcpy' reading 20 bytes from a region of size 8 [-Wstringop-overread]
+  507 |                       memcpy(receivedMessage, &event.value.v, sizeof(receivedMessage));
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:486:19: note: at offset 4 into source object 'event' of size 12
+  486 |           osEvent event;
+      |                   ^~~~~
+../Core/Src/main.c: In function 'TX_Task':
+../Core/Src/main.c:683:19: warning: 'memcpy' reading 20 bytes from a region of size 8 [-Wstringop-overread]
+  683 |                   memcpy(receivedMessageTX, &event.value.v, sizeof(receivedMessageTX));
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:678:17: note: at offset 4 into source object 'event' of size 12
+  678 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  47032	    524	  19660	  67216	  10690	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:25:44 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  46984	    524	  19660	  67168	  10660	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:26:18 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  45292	    524	  19660	  65476	   ffc4	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:31:45 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  45292	    524	  19660	  65476	   ffc4	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:32:14 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  45308	    524	  19660	  65492	   ffd4	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:32:56 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-size  RMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  45308	    524	  19660	  65492	   ffd4	RMS.elf
+Finished building: default.size.stdout
+ 
+09:39:45 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  46984	    524	  19660	  67168	  10660	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:40:53 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c: In function 'TX_Task':
+../Core/Src/main.c:676:17: warning: unused variable 'event' [-Wunused-variable]
+  676 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:675:15: warning: unused variable 'receivedMessageTX' [-Wunused-variable]
+  675 |         char *receivedMessageTX = NULL;
+      |               ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  46248	    524	  19660	  66432	  10380	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:45:10 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  45308	    524	  19660	  65492	   ffd4	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:47:29 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  45324	    524	  19660	  65508	   ffe4	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:49:10 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  45308	    524	  19660	  65492	   ffd4	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:50:15 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  45308	    524	  19660	  65492	   ffd4	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:50:38 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  45308	    524	  19660	  65492	   ffd4	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:53:40 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  46984	    524	  19660	  67168	  10660	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+09:56:18 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:597:17: warning: unused variable 'event' [-Wunused-variable]
+  597 |         osEvent event;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  47000	    524	  19660	  67184	  10670	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+10:07:42 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:380:17: error: 'count_touch' undeclared (first use in this function)
+  380 |                 count_touch++;
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:380:17: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:526:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  526 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:550:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  550 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:577:17: warning: unused variable 'event' [-Wunused-variable]
+  577 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:576:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  576 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:08:18 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:526:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  526 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:550:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  550 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:577:17: warning: unused variable 'event' [-Wunused-variable]
+  577 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:576:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  576 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  46968	    524	  19628	  67120	  10630	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+10:10:02 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'RX_Task':
+../Core/Src/main.c:415:65: error: 'send_to_rs485' undeclared (first use in this function); did you mean 'read_to_rs485'?
+  415 |                                                   memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+      |                                                                 ^~~~~~~~~~~~~
+      |                                                                 read_to_rs485
+../Core/Src/main.c:415:65: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:418:65: error: 'print_lcd_row2' undeclared (first use in this function)
+  418 |                                                   memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+      |                                                                 ^~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:527:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  527 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:551:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  551 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:578:17: warning: unused variable 'event' [-Wunused-variable]
+  578 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:577:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  577 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:10:22 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'RX_Task':
+../Core/Src/main.c:419:65: error: 'print_lcd_row2' undeclared (first use in this function)
+  419 |                                                   memset((void*)print_lcd_row2, 0, sizeof(print_lcd_row2));
+      |                                                                 ^~~~~~~~~~~~~~
+../Core/Src/main.c:419:65: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:528:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  528 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:552:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  552 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:579:17: warning: unused variable 'event' [-Wunused-variable]
+  579 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:578:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  578 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:11:05 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:528:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  528 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:552:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  552 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:579:17: warning: unused variable 'event' [-Wunused-variable]
+  579 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:578:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  578 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  48584	    524	  19636	  68744	  10c88	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+10:12:12 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:529:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  529 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:553:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  553 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:580:17: warning: unused variable 'event' [-Wunused-variable]
+  580 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:579:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  579 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  48600	    524	  19636	  68760	  10c98	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+10:14:52 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:529:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  529 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:553:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  553 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:580:17: warning: unused variable 'event' [-Wunused-variable]
+  580 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:579:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  579 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  48600	    524	  19636	  68760	  10c98	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+10:16:28 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'RX_Task':
+../Core/Src/main.c:420:93: error: 'data_send_rs485' undeclared (first use in this function); did you mean 'gen_data_send_rs485'?
+  420 |                                                   osMessagePut(StringRS485Handle, (uint32_t)data_send_rs485, osWaitForever);
+      |                                                                                             ^~~~~~~~~~~~~~~
+      |                                                                                             gen_data_send_rs485
+../Core/Src/main.c:420:93: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:535:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  535 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:559:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  559 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:586:17: warning: unused variable 'event' [-Wunused-variable]
+  586 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:585:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  585 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:17:11 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'RX_Task':
+../Core/Src/main.c:440:93: error: 'data_send_rs485' undeclared (first use in this function); did you mean 'gen_data_send_rs485'?
+  440 |                                                   osMessagePut(StringRS485Handle, (uint32_t)data_send_rs485, osWaitForever);
+      |                                                                                             ^~~~~~~~~~~~~~~
+      |                                                                                             gen_data_send_rs485
+../Core/Src/main.c:440:93: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:535:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  535 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:559:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  559 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:586:17: warning: unused variable 'event' [-Wunused-variable]
+  586 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:585:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  585 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:18:03 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:535:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  535 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:559:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  559 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:586:17: warning: unused variable 'event' [-Wunused-variable]
+  586 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:585:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  585 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  48712	    524	  19636	  68872	  10d08	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+10:21:09 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:541:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  541 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:565:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  565 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:592:17: warning: unused variable 'event' [-Wunused-variable]
+  592 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:591:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  591 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  48840	    596	  19636	  69072	  10dd0	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+10:26:33 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:527:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  527 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:551:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  551 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:578:17: warning: unused variable 'event' [-Wunused-variable]
+  578 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:577:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  577 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  48776	    596	  19636	  69008	  10d90	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+10:28:09 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:527:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  527 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:551:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  551 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:578:17: warning: unused variable 'event' [-Wunused-variable]
+  578 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:577:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  577 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  48776	    596	  19636	  69008	  10d90	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+10:28:36 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-size  RMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48776	    596	  19636	  69008	  10d90	RMS.elf
+Finished building: default.size.stdout
+ 
+10:29:16 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:527:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  527 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:551:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  551 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:578:17: warning: unused variable 'event' [-Wunused-variable]
+  578 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:577:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  577 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  48776	    596	  19636	  69008	  10d90	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+10:31:18 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:527:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  527 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:551:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  551 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:578:17: warning: unused variable 'event' [-Wunused-variable]
+  578 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:577:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  577 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  48792	    596	  19636	  69024	  10da0	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+10:31:48 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-size  RMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48792	    596	  19636	  69024	  10da0	RMS.elf
+Finished building: default.size.stdout
+ 
+10:33:37 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:527:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  527 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:551:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  551 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:578:17: warning: unused variable 'event' [-Wunused-variable]
+  578 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:577:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  577 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  48792	    596	  19636	  69024	  10da0	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+10:35:04 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:527:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  527 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:551:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  551 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:579:14: warning: unused variable 'send_to_rs485' [-Wunused-variable]
+  579 |         char send_to_rs485[50];
+      |              ^~~~~~~~~~~~~
+../Core/Src/main.c:578:17: warning: unused variable 'event' [-Wunused-variable]
+  578 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:577:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  577 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+   text	   data	    bss	    dec	    hex	filename
+  48728	    596	  19636	  68960	  10d60	RMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: RMS.list
+ 
+10:36:19 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/croutine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/croutine.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/croutine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/croutine.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/event_groups.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/event_groups.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/event_groups.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/list.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/list.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/list.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/list.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/queue.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/queue.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/queue.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/queue.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/tasks.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/tasks.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/tasks.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/tasks.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/timers.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/timers.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/timers.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/timers.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:527:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  527 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:551:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  551 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:579:14: warning: unused variable 'send_to_rs485' [-Wunused-variable]
+  579 |         char send_to_rs485[50];
+      |              ^~~~~~~~~~~~~
+../Core/Src/main.c:578:17: warning: unused variable 'event' [-Wunused-variable]
+  578 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:577:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  577 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.15.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: RMS.elf section `.bss' will not fit in region `RAM'
+C:/ST/STM32CubeIDE_1.15.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: region `RAM' overflowed by 3368 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: RMS.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:36:30 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.15.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: RMS.elf section `.bss' will not fit in region `RAM'
+C:/ST/STM32CubeIDE_1.15.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: region `RAM' overflowed by 3368 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: RMS.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:38:05 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.15.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: RMS.elf section `.bss' will not fit in region `RAM'
+C:/ST/STM32CubeIDE_1.15.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: region `RAM' overflowed by 3368 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: RMS.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:41:08 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Temp_Task':
+../Core/Src/main.c:527:15: warning: variable 'temperature' set but not used [-Wunused-but-set-variable]
+  527 |         float temperature;
+      |               ^~~~~~~~~~~
+../Core/Src/main.c: In function 'Press_Task':
+../Core/Src/main.c:551:17: warning: variable 'pressure' set but not used [-Wunused-but-set-variable]
+  551 |         int32_t pressure;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'Key_Task':
+../Core/Src/main.c:579:14: warning: unused variable 'send_to_rs485' [-Wunused-variable]
+  579 |         char send_to_rs485[50];
+      |              ^~~~~~~~~~~~~
+../Core/Src/main.c:578:17: warning: unused variable 'event' [-Wunused-variable]
+  578 |         osEvent event;
+      |                 ^~~~~
+../Core/Src/main.c:577:49: warning: unused variable 'count_touch' [-Wunused-variable]
+  577 |         uint16_t last_touch = 0, new_touch = 0, count_touch = 0;
+      |                                                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.15.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: RMS.elf section `.bss' will not fit in region `RAM'
+C:/ST/STM32CubeIDE_1.15.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: region `RAM' overflowed by 3368 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: RMS.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.

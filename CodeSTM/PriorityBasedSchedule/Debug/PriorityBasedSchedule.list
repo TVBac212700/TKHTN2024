@@ -3605,8 +3605,8 @@ void TaskRX()
  8001db8:	2100      	movs	r1, #0
  8001dba:	48a0      	ldr	r0, [pc, #640]	@ (800203c <TaskRX+0x28c>)
  8001dbc:	f004 fa97 	bl	80062ee <memset>
-	HAL_UART_Receive(&huart1, (uint8_t *)&read_to_rs485, sizeof (read_to_rs485) , 500);
- 8001dc0:	f44f 73fa 	mov.w	r3, #500	@ 0x1f4
+	HAL_UART_Receive(&huart1, (uint8_t *)&read_to_rs485, sizeof (read_to_rs485) , 1000);
+ 8001dc0:	f44f 737a 	mov.w	r3, #1000	@ 0x3e8
  8001dc4:	2232      	movs	r2, #50	@ 0x32
  8001dc6:	499d      	ldr	r1, [pc, #628]	@ (800203c <TaskRX+0x28c>)
  8001dc8:	489d      	ldr	r0, [pc, #628]	@ (8002040 <TaskRX+0x290>)
