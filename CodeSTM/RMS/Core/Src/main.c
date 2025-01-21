@@ -450,6 +450,14 @@ void RX_Task(void const * argument)
 						  osMessagePut(StringRS485Handle, (uint32_t)send_to_rs485, osWaitForever);
 						  osMessagePut(StringPrintHandle, (uint32_t)indicate_C, osWaitForever);
 					  }
+					  else
+					  {
+						  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+						  sprintf(send_to_rs485, "Invalid Data");
+						  send_to_rs485[strlen(send_to_rs485)+1] = RESPONSES(CODE_RESP);
+						  osMessagePut(StringRS485Handle, (uint32_t)send_to_rs485, osWaitForever);
+						  osMessagePut(StringPrintHandle, (uint32_t)send_to_rs485, osWaitForever);
+					  }
 				  }
 				  else if(result.Code == 2)
 				  {
@@ -468,6 +476,15 @@ void RX_Task(void const * argument)
 					  send_to_rs485[strlen(send_to_rs485)+1] = RESPONSES(CODE_RESP);
 					  osMessagePut(StringRS485Handle, (uint32_t)send_to_rs485, osWaitForever);
 					  osMessagePut(StringPrintHandle, (uint32_t)indicate_M, osWaitForever);
+				  }
+				  else
+				  {
+//					  result.Data[result.Len] = '\0';
+					  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+					  sprintf(send_to_rs485, "Invalid Code");
+					  send_to_rs485[strlen(send_to_rs485)+1] = RESPONSES(CODE_RESP);
+					  osMessagePut(StringRS485Handle, (uint32_t)send_to_rs485, osWaitForever);
+					  osMessagePut(StringPrintHandle, (uint32_t)send_to_rs485, osWaitForever);
 				  }
 			  }
 			  else if(check_crc(&result) != result.Crc)
