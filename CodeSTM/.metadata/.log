@@ -1203,11 +1203,16 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-01-20 20:31:43.066
 !MESSAGE Started RMI Server, listening on port 41337
+<<<<<<< Updated upstream
 !SESSION 2025-01-22 13:03:58.621 -----------------------------------------------
+=======
+!SESSION 2025-01-22 13:09:14.093 -----------------------------------------------
+>>>>>>> Stashed changes
 eclipse.buildId=Version 1.17.0
 java.version=21.0.3
 java.vendor=Eclipse Adoptium
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+<<<<<<< Updated upstream
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.core.resources 2 10035 2025-01-22 13:04:05.719
@@ -2281,3 +2286,21 @@ java.io.FileNotFoundException: D:\File\Project\TKHTN2024\CodeSTM\RMS\Debug\RMS.e
 
 !ENTRY org.eclipse.cdt.dsf 4 10005 2025-01-22 13:50:40.656
 !MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@4c76c5db): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+=======
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\File\Project\TKHTN2024\CodeSTM
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-01-22 13:09:16.921
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-01-22 13:09:23.897
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-01-22 13:09:23.899
+!MESSAGE Log4j2 initialized with config file D:\File\Project\TKHTN2024\CodeSTM\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-01-22 13:09:34.256
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-01-22 13:10:19.822
+!MESSAGE Indexed 'RMS' (36 sources, 140 headers) in 11.6 sec: 13,349 declarations; 69,804 references; 7 unresolved inclusions; 1,000 syntax errors; 1,400 unresolved names (1.7%)
+>>>>>>> Stashed changes
