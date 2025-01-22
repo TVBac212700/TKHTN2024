@@ -538,3 +538,4 @@
 2025-01-22 16:11:36,611 [INFO] WebApp:579 - Web application path used D:\TKHTN\STM32 cube\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.13.0.202411220809\db\plugins\mcufinder\reactClient1\index.html
 2025-01-22 16:11:36,673 [INFO] UserAuth:486 - Internet connection configuration mode: 1
 2025-01-22 16:11:37,609 [INFO] WebApp:187 - Connection restablished
+2025-01-22 17:11:34,340 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
