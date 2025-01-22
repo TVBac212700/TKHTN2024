@@ -108,15 +108,6 @@ int LCD_PM[] = {LCD_PM_C, LCD_PM_D, LCD_PM_T};
 
 int *ALL_TASK[] = {RX_PM, TX_PM, Temp_PM, Pres_PM, KeyB_PM, LCD_PM};
 
-int DF_RX_PM[] = {RX_PM_C, RX_PM_D, RX_PM_T};
-int DF_TX_PM[] = {TX_PM_C, TX_PM_D, TX_PM_T};
-int DF_Temp_PM[] = {TEMP_PM_C, TEMP_PM_D, TEMP_PM_T};
-int DF_Pres_PM[] = {PRES_PM_C, PRES_PM_D, PRES_PM_T};
-int DF_KeyB_PM[] = {KEYB_PM_C, KEYB_PM_D, KEYB_PM_T};
-int DF_LCD_PM[] = {LCD_PM_C, LCD_PM_D, LCD_PM_T};
-
-int *DF_ALL_TASK[] = {RX_PM, TX_PM, Temp_PM, Pres_PM, KeyB_PM, LCD_PM};
-
 char indicate_1[] = "Send To RS485";
 char indicate_T[] = "Send Temperature";
 char indicate_P[] = "Send Pressure";
@@ -126,7 +117,6 @@ char detect_touch[] = "Detect Touch %d";
 char indicate_E[] = "CRC Error";
 char indicate_E_CDT[] = "Invalid C D T";
 char indicate_C_D_T[] = "Set C D T";
-char indicate_R_C_D_T[] = "Reset C D T";
 //char key_board[20];
 float temperature;
 int32_t pressure;
@@ -544,20 +534,9 @@ void RX_Task(void const * argument)
 					  osMessagePut(StringRS485Handle, (uint32_t)send_to_rs485, osWaitForever);
 					  osMessagePut(StringPrintHandle, (uint32_t)Res, osWaitForever);
 				  }
-				  else if(result.Code == 5)
+				  else if(result.Code == 4)
 				  {
-					  for(int i = 0; i < 5; i++)
-					  {
-						  for (int j = 0; j < 2; j++)
-						  {
-							  ALL_TASK[i][j] = DF_ALL_TASK[i][j];
-						  }
-					  }
-					  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
-					  sprintf(send_to_rs485, indicate_R_C_D_T);
-					  send_to_rs485[strlen(send_to_rs485)+1] = RESPONSES(CODE_RESP);
-					  osMessagePut(StringRS485Handle, (uint32_t)send_to_rs485, osWaitForever);
-					  osMessagePut(StringPrintHandle, (uint32_t)indicate_R_C_D_T, osWaitForever);
+
 				  }
 				  else
 				  {

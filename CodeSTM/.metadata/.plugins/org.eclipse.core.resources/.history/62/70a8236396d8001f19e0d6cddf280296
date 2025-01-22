@@ -126,7 +126,6 @@ char detect_touch[] = "Detect Touch %d";
 char indicate_E[] = "CRC Error";
 char indicate_E_CDT[] = "Invalid C D T";
 char indicate_C_D_T[] = "Set C D T";
-char indicate_R_C_D_T[] = "Reset C D T";
 //char key_board[20];
 float temperature;
 int32_t pressure;
@@ -554,10 +553,10 @@ void RX_Task(void const * argument)
 						  }
 					  }
 					  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
-					  sprintf(send_to_rs485, indicate_R_C_D_T);
+					  sprintf(send_to_rs485, indicate_C_D_T);
 					  send_to_rs485[strlen(send_to_rs485)+1] = RESPONSES(CODE_RESP);
 					  osMessagePut(StringRS485Handle, (uint32_t)send_to_rs485, osWaitForever);
-					  osMessagePut(StringPrintHandle, (uint32_t)indicate_R_C_D_T, osWaitForever);
+					  osMessagePut(StringPrintHandle, (uint32_t)indicate_C_D_T, osWaitForever);
 				  }
 				  else
 				  {

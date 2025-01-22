@@ -126,7 +126,7 @@ char detect_touch[] = "Detect Touch %d";
 char indicate_E[] = "CRC Error";
 char indicate_E_CDT[] = "Invalid C D T";
 char indicate_C_D_T[] = "Set C D T";
-char indicate_R_C_D_T[] = "Reset C D T";
+char indicate_R_C_D_T[] = "ReSet C D T";
 //char key_board[20];
 float temperature;
 int32_t pressure;
