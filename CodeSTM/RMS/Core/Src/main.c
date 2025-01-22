@@ -70,10 +70,44 @@ osMessageQId StringPrintHandle;
 osMessageQId StringRS485Handle;
 osMutexId I2C_BusHandle;
 /* USER CODE BEGIN PV */
-//char print_lcd_row1[30];
-//char print_lcd_row2[30];
-//char send_to_rs485[50];
-//char read_to_rs485[50];
+
+#define C_INDEX 0
+#define D_INDEX 1
+#define T_INDEX 2
+
+#define RX_PM_C 100
+#define RX_PM_D 150
+#define RX_PM_T 150
+
+#define TX_PM_C 10
+#define TX_PM_D 100
+#define TX_PM_T 1000
+
+#define TEMP_PM_C 7
+#define TEMP_PM_D 5000
+#define TEMP_PM_T 5000
+
+#define PRES_PM_C 36
+#define PRES_PM_D 5000
+#define PRES_PM_T 5000
+
+#define KEYB_PM_C 1
+#define KEYB_PM_D 100
+#define KEYB_PM_T 200
+
+#define LCD_PM_C 50
+#define LCD_PM_D 100
+#define LCD_PM_T 1000
+
+int RX_PM[] = {RX_PM_C, RX_PM_D, RX_PM_T};
+int TX_PM[] = {TX_PM_C, TX_PM_D, TX_PM_T};
+int Temp_PM[] = {TEMP_PM_C, TEMP_PM_D, TEMP_PM_T};
+int Pres_PM[] = {PRES_PM_C, PRES_PM_D, PRES_PM_T};
+int KeyB_PM[] = {KEYB_PM_C, KEYB_PM_D, KEYB_PM_T};
+int LCD_PM[] = {LCD_PM_C, LCD_PM_D, LCD_PM_T};
+
+int *ALL_TASK[] = {RX_PM, TX_PM, Temp_PM, Pres_PM, KeyB_PM, LCD_PM};
+
 char indicate_1[] = "Send To RS485";
 char indicate_T[] = "Send Temperature";
 char indicate_P[] = "Send Pressure";
@@ -81,6 +115,8 @@ char indicate_C[] = "Send Count";
 char indicate_M[] = "Send Status";
 char detect_touch[] = "Detect Touch %d";
 char indicate_E[] = "CRC Error";
+char indicate_E_CDT[] = "Invalid C D T";
+char indicate_C_D_T[] = "Set C D T";
 //char key_board[20];
 float temperature;
 int32_t pressure;
@@ -416,7 +452,7 @@ void RX_Task(void const * argument)
   {
 
 		memset((void*)read_to_rs485,0,sizeof(read_to_rs485));
-		HAL_UART_Receive(&huart1, (uint8_t *)&read_to_rs485, sizeof (read_to_rs485) , 100);
+		HAL_UART_Receive(&huart1, (uint8_t *)&read_to_rs485, sizeof (read_to_rs485) , RX_PM[C_INDEX]);
 		  if(strlen(read_to_rs485) > 1)
 		  {
 			  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
@@ -477,9 +513,29 @@ void RX_Task(void const * argument)
 					  osMessagePut(StringRS485Handle, (uint32_t)send_to_rs485, osWaitForever);
 					  osMessagePut(StringPrintHandle, (uint32_t)indicate_M, osWaitForever);
 				  }
+				  else if(result.Code == 4)
+				  {
+					  int Task = -1, NewC = 0, NewD = 0, NewT = 0;
+					  char *Res = indicate_E_CDT;
+					  result.Data[result.Len] = '\0';
+					  if(sscanf((char*)result.Data, "%d%d%d%d",&Task, &NewC, &NewD, &NewT) == 4)
+					  {
+						  if(Task >= 0 && Task < 6 && NewC < NewD && NewD <= NewT)
+						  {
+							  ALL_TASK[Task][C_INDEX] = NewC;
+							  ALL_TASK[Task][D_INDEX] = NewD;
+							  ALL_TASK[Task][T_INDEX] = NewT;
+							  Res = indicate_C_D_T;
+						  }
+					  }
+					  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
+					  sprintf(send_to_rs485, Res);
+					  send_to_rs485[strlen(send_to_rs485)+1] = RESPONSES(CODE_RESP);
+					  osMessagePut(StringRS485Handle, (uint32_t)send_to_rs485, osWaitForever);
+					  osMessagePut(StringPrintHandle, (uint32_t)Res, osWaitForever);
+				  }
 				  else
 				  {
-//					  result.Data[result.Len] = '\0';
 					  memset((void*)send_to_rs485,0,sizeof(send_to_rs485));
 					  sprintf(send_to_rs485, "Invalid Code");
 					  send_to_rs485[strlen(send_to_rs485)+1] = RESPONSES(CODE_RESP);
@@ -497,7 +553,7 @@ void RX_Task(void const * argument)
 			  }
 		  }
 		  osDelay(20);
-		  UserDelayUntil(&GetTick,150);
+		  UserDelayUntil(&GetTick,RX_PM[T_INDEX]);
   }
   /* USER CODE END 5 */
 }
@@ -538,7 +594,7 @@ void LCD_Task(void const * argument)
 			  LastMessage[strlen(NewMessage)] = '\0';
 		  }
 	  }
-	  UserDelayUntil(&GetTick,1000);
+	  UserDelayUntil(&GetTick,LCD_PM[T_INDEX]);
 //	  osDelay(1000);
   }
   /* USER CODE END LCD_Task */
@@ -570,7 +626,7 @@ void Temp_Task(void const * argument)
 	    sen_to_lcd[strlen(sen_to_lcd)+1] = UPGRADE(CODE_TEMP);
 	    osMessagePut(StringRS485Handle, (uint32_t)sen_to_lcd, osWaitForever);
 //	    osDelay(5000);
-	    UserDelayUntil(&GetTick,5000);
+	    UserDelayUntil(&GetTick,Temp_PM[T_INDEX]);
   }
   /* USER CODE END Temp_Task */
 }
@@ -596,15 +652,13 @@ void Press_Task(void const * argument)
 	    	pressure = BMP180_GetPressure();
 	        osMutexRelease(I2C_BusHandle);
 	    }
-	    osDelay(2500);
+	    osDelay(Pres_PM[T_INDEX]/2);
 	    char sen_to_lcd[20];
 	    sprintf(sen_to_lcd,"%dPa", (int)pressure);
 	    osMessagePut(StringPrintHandle, (uint32_t)sen_to_lcd, osWaitForever);
 	    sen_to_lcd[strlen(sen_to_lcd)+1] = UPGRADE(CODE_PRES);
 	    osMessagePut(StringRS485Handle, (uint32_t)sen_to_lcd, osWaitForever);
-	    UserDelayUntil(&GetTick,5000);
-//	    osDelay(2500);
-
+	    UserDelayUntil(&GetTick,Pres_PM[T_INDEX]);
   }
   /* USER CODE END Press_Task */
 }
@@ -669,9 +723,8 @@ void Key_Task(void const * argument)
 		  }
 	  }
 	  last_touch = new_touch;
-
-	  UserDelayUntil(&GetTick,200);
-//	  osDelay(200);
+	  osDelay(20);
+	  UserDelayUntil(&GetTick,KeyB_PM[T_INDEX]);
   }
   /* USER CODE END Key_Task */
 }
@@ -705,8 +758,8 @@ void TX_Task(void const * argument)
 			  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 		  }
 	  }
-//	  UserDelayUntil(&GetTick,1000);
-	  osDelay(500);
+	  osDelay(20);
+	  UserDelayUntil(&GetTick,TX_PM[T_INDEX]);
   }
   /* USER CODE END TX_Task */
 }

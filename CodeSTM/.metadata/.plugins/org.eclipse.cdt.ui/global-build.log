@@ -1,544 +1,80 @@
-17:02:21 **** Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
-arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f103c8tx.d" -MT"Core/Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f103c8tx.o" "../Core/Startup/startup_stm32f103c8tx.s"
-arm-none-eabi-gcc "../Core/Src/MPR121.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPR121.d" -MT"Core/Src/MPR121.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/MPR121.o"
-arm-none-eabi-gcc "../Core/Src/bmp180_for_stm32_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/bmp180_for_stm32_hal.d" -MT"Core/Src/bmp180_for_stm32_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/bmp180_for_stm32_hal.o"
-arm-none-eabi-gcc "../Core/Src/liquidcrystal_i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/liquidcrystal_i2c.d" -MT"Core/Src/liquidcrystal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/liquidcrystal_i2c.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
-arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
-arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
+13:51:55 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
  
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
    text	   data	    bss	    dec	    hex	filename
-  34848	    596	   2300	  37744	   9370	PriorityBasedSchedule.elf
+  50112	    692	  19636	  70440	  11328	RMS.elf
 Finished building: default.size.stdout
  
-Finished building: PriorityBasedSchedule.list
+Finished building: RMS.list
  
-17:04:22 **** Clean-only build of configuration Debug for project MeasureTimeTask ****
-make -j12 clean 
-rm -rf ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.su
-rm -rf ./Core/Startup/startup_stm32f103c8tx.d ./Core/Startup/startup_stm32f103c8tx.o
-rm -rf ./Core/Src/MPR121.cyclo ./Core/Src/MPR121.d ./Core/Src/MPR121.o ./Core/Src/MPR121.su ./Core/Src/bmp180_for_stm32_hal.cyclo ./Core/Src/bmp180_for_stm32_hal.d ./Core/Src/bmp180_for_stm32_hal.o ./Core/Src/bmp180_for_stm32_hal.su ./Core/Src/liquidcrystal_i2c.cyclo ./Core/Src/liquidcrystal_i2c.d ./Core/Src/liquidcrystal_i2c.o ./Core/Src/liquidcrystal_i2c.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32f1xx_hal_msp.cyclo ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_hal_msp.su ./Core/Src/stm32f1xx_it.cyclo ./Core/Src/stm32f1xx_it.d ./Core/Src/stm32f1xx_it.o ./Core/Src/stm32f1xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f1xx.cyclo ./Core/Src/system_stm32f1xx.d ./Core/Src/system_stm32f1xx.o ./Core/Src/system_stm32f1xx.su
-rm -rf MeasureTimeTask.elf MeasureTimeTask.list MeasureTimeTask.map default.size.stdout
+14:01:49 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
  
-17:04:22 **** Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
-arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f103c8tx.d" -MT"Core/Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f103c8tx.o" "../Core/Startup/startup_stm32f103c8tx.s"
-arm-none-eabi-gcc "../Core/Src/MPR121.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPR121.d" -MT"Core/Src/MPR121.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/MPR121.o"
-arm-none-eabi-gcc "../Core/Src/bmp180_for_stm32_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/bmp180_for_stm32_hal.d" -MT"Core/Src/bmp180_for_stm32_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/bmp180_for_stm32_hal.o"
-arm-none-eabi-gcc "../Core/Src/liquidcrystal_i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/liquidcrystal_i2c.d" -MT"Core/Src/liquidcrystal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/liquidcrystal_i2c.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
-arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
-arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
-arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MeasureTimeTask.elf
- 
-arm-none-eabi-size  MeasureTimeTask.elf 
-arm-none-eabi-objdump -h -S MeasureTimeTask.elf  > "MeasureTimeTask.list"
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
    text	   data	    bss	    dec	    hex	filename
-  24580	    220	   2292	  27092	   69d4	MeasureTimeTask.elf
+  49856	    676	  19636	  70168	  11218	RMS.elf
 Finished building: default.size.stdout
  
-Finished building: MeasureTimeTask.list
+Finished building: RMS.list
  
-17:05:16 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-size  MeasureTimeTask.elf 
+14:07:48 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'RX_Task':
+../Core/Src/main.c:521:59: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  521 |                                           if(sscanf(result.Data, "%d%d%d%d",&Task, &NewC, &NewD, &NewT) == 4)
+      |                                                     ~~~~~~^~~~~
+      |                                                           |
+      |                                                           uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:26:
+C:\ST\STM32CubeIDE_1.15.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:210:17: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  210 | int     sscanf (const char *__restrict, const char *__restrict, ...)
+      |                 ^
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
    text	   data	    bss	    dec	    hex	filename
-  24580	    220	   2292	  27092	   69d4	MeasureTimeTask.elf
+  52140	    696	  19632	  72468	  11b14	RMS.elf
 Finished building: default.size.stdout
  
-17:06:08 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
+Finished building: RMS.list
+ 
+14:08:31 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
    text	   data	    bss	    dec	    hex	filename
-  34848	    596	   2300	  37744	   9370	PriorityBasedSchedule.elf
+  52140	    696	  19632	  72468	  11b14	RMS.elf
 Finished building: default.size.stdout
  
-17:06:23 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-size  MeasureTimeTask.elf 
+Finished building: RMS.list
+ 
+14:12:03 **** Incremental Build of configuration Debug for project RMS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RMS.elf
+ 
+arm-none-eabi-size  RMS.elf 
+arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
    text	   data	    bss	    dec	    hex	filename
-  24580	    220	   2292	  27092	   69d4	MeasureTimeTask.elf
+  52204	    720	  19632	  72556	  11b6c	RMS.elf
 Finished building: default.size.stdout
  
-17:08:55 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MeasureTimeTask.elf
- 
-arm-none-eabi-size  MeasureTimeTask.elf 
-arm-none-eabi-objdump -h -S MeasureTimeTask.elf  > "MeasureTimeTask.list"
-   text	   data	    bss	    dec	    hex	filename
-  34848	    596	   2300	  37744	   9370	MeasureTimeTask.elf
-Finished building: default.size.stdout
- 
-Finished building: MeasureTimeTask.list
- 
-17:12:53 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MeasureTimeTask.elf
- 
-arm-none-eabi-size  MeasureTimeTask.elf 
-arm-none-eabi-objdump -h -S MeasureTimeTask.elf  > "MeasureTimeTask.list"
-   text	   data	    bss	    dec	    hex	filename
-  31856	    536	   2208	  34600	   8728	MeasureTimeTask.elf
-Finished building: default.size.stdout
- 
-Finished building: MeasureTimeTask.list
- 
-17:13:34 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MeasureTimeTask.elf
- 
-arm-none-eabi-size  MeasureTimeTask.elf 
-arm-none-eabi-objdump -h -S MeasureTimeTask.elf  > "MeasureTimeTask.list"
-   text	   data	    bss	    dec	    hex	filename
-  31856	    536	   2208	  34600	   8728	MeasureTimeTask.elf
-Finished building: default.size.stdout
- 
-Finished building: MeasureTimeTask.list
- 
-17:14:40 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MeasureTimeTask.elf
- 
-arm-none-eabi-size  MeasureTimeTask.elf 
-arm-none-eabi-objdump -h -S MeasureTimeTask.elf  > "MeasureTimeTask.list"
-   text	   data	    bss	    dec	    hex	filename
-  30912	    484	   2156	  33552	   8310	MeasureTimeTask.elf
-Finished building: default.size.stdout
- 
-Finished building: MeasureTimeTask.list
- 
-17:16:01 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MeasureTimeTask.elf
- 
-arm-none-eabi-size  MeasureTimeTask.elf 
-arm-none-eabi-objdump -h -S MeasureTimeTask.elf  > "MeasureTimeTask.list"
-   text	   data	    bss	    dec	    hex	filename
-  31200	    484	   2156	  33840	   8430	MeasureTimeTask.elf
-Finished building: default.size.stdout
- 
-Finished building: MeasureTimeTask.list
- 
-17:21:04 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MeasureTimeTask.elf
- 
-arm-none-eabi-size  MeasureTimeTask.elf 
-arm-none-eabi-objdump -h -S MeasureTimeTask.elf  > "MeasureTimeTask.list"
-   text	   data	    bss	    dec	    hex	filename
-  34944	    596	   2300	  37840	   93d0	MeasureTimeTask.elf
-Finished building: default.size.stdout
- 
-Finished building: MeasureTimeTask.list
- 
-17:24:06 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MeasureTimeTask.elf
- 
-arm-none-eabi-size  MeasureTimeTask.elf 
-arm-none-eabi-objdump -h -S MeasureTimeTask.elf  > "MeasureTimeTask.list"
-   text	   data	    bss	    dec	    hex	filename
-  34944	    596	   2300	  37840	   93d0	MeasureTimeTask.elf
-Finished building: default.size.stdout
- 
-Finished building: MeasureTimeTask.list
- 
-17:34:14 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MeasureTimeTask.elf
- 
-arm-none-eabi-size  MeasureTimeTask.elf 
-arm-none-eabi-objdump -h -S MeasureTimeTask.elf  > "MeasureTimeTask.list"
-   text	   data	    bss	    dec	    hex	filename
-  34944	    596	   2300	  37840	   93d0	MeasureTimeTask.elf
-Finished building: default.size.stdout
- 
-Finished building: MeasureTimeTask.list
- 
-17:40:26 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MeasureTimeTask.elf
- 
-arm-none-eabi-size  MeasureTimeTask.elf 
-arm-none-eabi-objdump -h -S MeasureTimeTask.elf  > "MeasureTimeTask.list"
-   text	   data	    bss	    dec	    hex	filename
-  34944	    596	   2300	  37840	   93d0	MeasureTimeTask.elf
-Finished building: default.size.stdout
- 
-Finished building: MeasureTimeTask.list
- 
-17:46:13 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MeasureTimeTask.elf
- 
-arm-none-eabi-size  MeasureTimeTask.elf 
-arm-none-eabi-objdump -h -S MeasureTimeTask.elf  > "MeasureTimeTask.list"
-   text	   data	    bss	    dec	    hex	filename
-  34944	    596	   2300	  37840	   93d0	MeasureTimeTask.elf
-Finished building: default.size.stdout
- 
-Finished building: MeasureTimeTask.list
- 
-18:40:57 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34848	    596	   2300	  37744	   9370	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-18:41:26 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34848	    596	   2300	  37744	   9370	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-19:40:27 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
- 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
-   text	   data	    bss	    dec	    hex	filename
-  34848	    596	   2300	  37744	   9370	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-Finished building: PriorityBasedSchedule.list
- 
-19:41:36 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
- 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
-   text	   data	    bss	    dec	    hex	filename
-  34848	    596	   2300	  37744	   9370	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-Finished building: PriorityBasedSchedule.list
- 
-19:42:09 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34848	    596	   2300	  37744	   9370	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-19:43:44 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
- 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
-   text	   data	    bss	    dec	    hex	filename
-  34880	    596	   2300	  37776	   9390	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-Finished building: PriorityBasedSchedule.list
- 
-19:45:01 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34880	    596	   2300	  37776	   9390	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-19:46:49 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34880	    596	   2300	  37776	   9390	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-19:47:47 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
- 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
-   text	   data	    bss	    dec	    hex	filename
-  34880	    596	   2300	  37776	   9390	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-Finished building: PriorityBasedSchedule.list
- 
-19:58:06 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34880	    596	   2300	  37776	   9390	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-20:06:55 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
- 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
-   text	   data	    bss	    dec	    hex	filename
-  34880	    596	   2300	  37776	   9390	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-Finished building: PriorityBasedSchedule.list
- 
-20:08:47 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
- 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
-   text	   data	    bss	    dec	    hex	filename
-  34880	    596	   2300	  37776	   9390	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-Finished building: PriorityBasedSchedule.list
- 
-20:10:45 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'TaskRX':
-../Core/Src/main.c:229:27: warning: 'memcpy' reading 12 bytes from a region of size 10 [-Wstringop-overread]
-  229 |                           memcpy((void*)print_lcd_row2, (void*)indicate_E, sizeof(indicate_M));
-      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:70:6: note: source object 'indicate_E' of size 10
-   70 | char indicate_E[] = "CRC Error";
-      |      ^~~~~~~~~~
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
- 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
-   text	   data	    bss	    dec	    hex	filename
-  35016	    608	   2296	  37920	   9420	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-Finished building: PriorityBasedSchedule.list
- 
-20:11:15 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
- 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
-   text	   data	    bss	    dec	    hex	filename
-  35016	    608	   2296	  37920	   9420	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-Finished building: PriorityBasedSchedule.list
- 
-20:14:54 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
- 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
-   text	   data	    bss	    dec	    hex	filename
-  34880	    596	   2300	  37776	   9390	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-Finished building: PriorityBasedSchedule.list
- 
-20:16:14 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34880	    596	   2300	  37776	   9390	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-20:17:14 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
- 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
-   text	   data	    bss	    dec	    hex	filename
-  34944	    608	   2296	  37848	   93d8	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-Finished building: PriorityBasedSchedule.list
- 
-20:21:42 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-size  MeasureTimeTask.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34944	    596	   2300	  37840	   93d0	MeasureTimeTask.elf
-Finished building: default.size.stdout
- 
-20:22:08 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:316:25: warning: unused variable 'diff' [-Wunused-variable]
-  316 |           unsigned long diff = (t2 - t1)/72;
-      |                         ^~~~
-arm-none-eabi-gcc -o "MeasureTimeTask.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\MeasureTimeTask\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MeasureTimeTask.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MeasureTimeTask.elf
- 
-arm-none-eabi-size  MeasureTimeTask.elf 
-arm-none-eabi-objdump -h -S MeasureTimeTask.elf  > "MeasureTimeTask.list"
-   text	   data	    bss	    dec	    hex	filename
-  34888	    596	   2300	  37784	   9398	MeasureTimeTask.elf
-Finished building: default.size.stdout
- 
-Finished building: MeasureTimeTask.list
- 
-20:23:37 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34944	    608	   2296	  37848	   93d8	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-20:24:27 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34944	    608	   2296	  37848	   93d8	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-20:26:56 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34944	    608	   2296	  37848	   93d8	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-20:27:33 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34944	    608	   2296	  37848	   93d8	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-20:30:00 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34944	    608	   2296	  37848	   93d8	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-20:30:53 **** Incremental Build of configuration Debug for project MeasureTimeTask ****
-make -j12 all 
-arm-none-eabi-size  MeasureTimeTask.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34888	    596	   2300	  37784	   9398	MeasureTimeTask.elf
-Finished building: default.size.stdout
- 
-20:31:53 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  34944	    608	   2296	  37848	   93d8	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-20:33:03 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
- 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
-   text	   data	    bss	    dec	    hex	filename
-  34944	    608	   2296	  37848	   93d8	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-Finished building: PriorityBasedSchedule.list
- 
-20:33:53 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "PriorityBasedSchedule.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\PriorityBasedSchedule\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PriorityBasedSchedule.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PriorityBasedSchedule.elf
- 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-arm-none-eabi-objdump -h -S PriorityBasedSchedule.elf  > "PriorityBasedSchedule.list"
-   text	   data	    bss	    dec	    hex	filename
-  35016	    608	   2296	  37920	   9420	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
- 
-Finished building: PriorityBasedSchedule.list
- 
-20:38:18 **** Incremental Build of configuration Debug for project PriorityBasedSchedule ****
-make -j12 all 
-arm-none-eabi-size  PriorityBasedSchedule.elf 
-   text	   data	    bss	    dec	    hex	filename
-  35016	    608	   2296	  37920	   9420	PriorityBasedSchedule.elf
-Finished building: default.size.stdout
+Finished building: RMS.list
  
