@@ -1,85 +1,14 @@
-14:47:55 **** Incremental Build of configuration Debug for project RMS ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:92: warning: "RX_PM_C" redefined
-   92 | #define RX_PM_C 500
-      | 
-../Core/Src/main.c:78: note: this is the location of the previous definition
-   78 | #define RX_PM_C 100
-      | 
-../Core/Src/main.c:93: warning: "RX_PM_D" redefined
-   93 | #define RX_PM_D 700
-      | 
-../Core/Src/main.c:79: note: this is the location of the previous definition
-   79 | #define RX_PM_D 150
-      | 
-../Core/Src/main.c:94: warning: "RX_PM_T" redefined
-   94 | #define RX_PM_T 700
-      | 
-../Core/Src/main.c:80: note: this is the location of the previous definition
-   80 | #define RX_PM_T 150
-      | 
-../Core/Src/main.c:98: warning: "TX_PM_T" redefined
-   98 | #define TX_PM_T 200
-      | 
-../Core/Src/main.c:84: note: this is the location of the previous definition
-   84 | #define TX_PM_T 1000
-      | 
-../Core/Src/main.c:100: warning: "TEMP_PM_C" redefined
-  100 | #define TEMP_PM_C 30
-      | 
-../Core/Src/main.c:86: note: this is the location of the previous definition
-   86 | #define TEMP_PM_C 7
-      | 
-../Core/Src/main.c:101: warning: "TEMP_PM_D" redefined
-  101 | #define TEMP_PM_D 100
-      | 
-../Core/Src/main.c:87: note: this is the location of the previous definition
-   87 | #define TEMP_PM_D 5000
-      | 
-../Core/Src/main.c:104: warning: "PRES_PM_C" redefined
-  104 | #define PRES_PM_C 50
-      | 
-../Core/Src/main.c:90: note: this is the location of the previous definition
-   90 | #define PRES_PM_C 36
-      | 
-../Core/Src/main.c:105: warning: "PRES_PM_D" redefined
-  105 | #define PRES_PM_D 100
-      | 
-../Core/Src/main.c:91: note: this is the location of the previous definition
-   91 | #define PRES_PM_D 5000
-      | 
-../Core/Src/main.c: In function 'RX_Task':
-../Core/Src/main.c:577:1: error: version control conflict marker in file
-  577 | >>>>>>> Stashed changes
-      | ^~~~~~~
-make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-14:48:52 **** Incremental Build of configuration Debug for project RMS ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: RMS.elf
- 
-arm-none-eabi-size  RMS.elf 
-arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+16:11:45 **** Incremental Build of configuration Debug for project TimeSlice ****
+make -j16 all 
+arm-none-eabi-size  TimeSlice.elf 
    text	   data	    bss	    dec	    hex	filename
-  52204	    720	  19632	  72556	  11b6c	RMS.elf
+  35168	    800	   2296	  38264	   9578	TimeSlice.elf
 Finished building: default.size.stdout
  
-Finished building: RMS.list
- 
-14:56:31 **** Incremental Build of configuration Debug for project RMS ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "RMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\RMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RMS.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: RMS.elf
- 
-arm-none-eabi-size  RMS.elf 
-arm-none-eabi-objdump -h -S RMS.elf  > "RMS.list"
+16:11:58 **** Incremental Build of configuration Debug for project TimeSlice ****
+make -j16 all 
+arm-none-eabi-size  TimeSlice.elf 
    text	   data	    bss	    dec	    hex	filename
-  52412	    756	  19636	  72804	  11c64	RMS.elf
+  35168	    800	   2296	  38264	   9578	TimeSlice.elf
 Finished building: default.size.stdout
- 
-Finished building: RMS.list
  
