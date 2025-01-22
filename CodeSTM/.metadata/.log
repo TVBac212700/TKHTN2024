@@ -1268,3 +1268,6 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2025-01-22 22:21:49.509
 !MESSAGE Indexed 'RoundRobin' (22 sources, 116 headers) in 2.06 sec: 9,567 declarations; 43,356 references; 7 unresolved inclusions; 862 syntax errors; 1,309 unresolved names (2.4%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-01-22 22:30:19.538
+!MESSAGE Indexed 'EDFPlus' (22 sources, 116 headers) in 1.52 sec: 9,601 declarations; 43,456 references; 7 unresolved inclusions; 862 syntax errors; 1,304 unresolved names (2.4%)
