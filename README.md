@@ -1,2 +1,18 @@
 # TKHTN2024
  
+## Mô tả
+Dự án này giúp bạn [mô tả chức năng chính]. Nó được thiết kế để [đối tượng người dùng] sử dụng dễ dàng và hiệu quả.
+
+## Cài đặt
++ Jupyter
++ Python Module
+    + flask
+    + pyserial
+    + struct
+    + threading
+    + logging 
+    + numpy
+    + matplotlib
+    + csv
++ STM32CubeIDE
++ 
