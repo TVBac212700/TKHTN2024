@@ -2,7 +2,7 @@
 <Configuration status="info">
     <ThresholdFilter level="INFO"/>
     <Appenders>
-        <RollingFile name="DEBUGFILE" fileName="D:/File/Project/TKHTN2024/CodeSTM/.metadata/.ide.log" filePattern="D:/File/Project/TKHTN2024/CodeSTM/.metadata/.ide.log-%d{yyyy-MM-dd}.log">
+        <RollingFile name="DEBUGFILE" fileName="D:/TKHTN/TKHTN2024/CodeSTM/.metadata/.ide.log" filePattern="D:/TKHTN/TKHTN2024/CodeSTM/.metadata/.ide.log-%d{yyyy-MM-dd}.log">
             <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss,SSS} [%p] %c{1}:%L - %m%n" />
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1" modulate="true" />
