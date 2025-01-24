@@ -460,7 +460,6 @@ void RX_Task(void const * argument)
 	uint32_t GetTick = 0;
   for(;;)
   {
-
 		memset((void*)read_to_rs485,0,sizeof(read_to_rs485));
 		HAL_UART_Receive(&huart1, (uint8_t *)&read_to_rs485, sizeof (read_to_rs485) , RX_PM[C_INDEX]);
 		  if(strlen(read_to_rs485) > 1)
