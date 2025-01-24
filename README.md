@@ -5,6 +5,7 @@ Dự án này giúp bạn [mô tả chức năng chính]. Nó được thiết k
 
 ## Cài đặt
 + Jupyter
++ Live Server
 + Python Module
     + flask
     + pyserial
@@ -24,13 +25,14 @@ Dự án này giúp bạn [mô tả chức năng chính]. Nó được thiết k
     + RoundRobin:
     + TimeSlice:
 + Demo-Project-GK
-    + TVBac212700:
-    + Vinh:
+    + TVBac212700: Project Demo Giữa kỳ
+    + Vinh: Project Demo Giữa kỳ
+    + Cong: Project Demo Giữa kỳ
 + Document
-    + Datasheet:
-    + Images:
+    + Datasheet: Datasheet của các linh kiện
+    + Images: Một số hình ảnh 
     + Other:
-    + Reports:
+    + Reports: Các báo cáo
 + RS485
-    + HTML:
-    + RS485.ipynb: 
+    + HTML: Giao diện Web 
+    + RS485.ipynb: Code giao diện kết nối với Serial, mô phỏng lại kết nối RS485
