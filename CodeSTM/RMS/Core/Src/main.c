@@ -115,7 +115,7 @@ int DF_Pres_PM[] = {PRES_PM_C, PRES_PM_D, PRES_PM_T};
 int DF_KeyB_PM[] = {KEYB_PM_C, KEYB_PM_D, KEYB_PM_T};
 int DF_LCD_PM[] = {LCD_PM_C, LCD_PM_D, LCD_PM_T};
 
-int *DF_ALL_TASK[] = {RX_PM, TX_PM, Temp_PM, Pres_PM, KeyB_PM, LCD_PM};
+int *DF_ALL_TASK[] = {DF_RX_PM, DF_TX_PM, DF_Temp_PM, DF_Pres_PM, DF_KeyB_PM, DF_LCD_PM};
 
 char indicate_1[] = "Send To RS485";
 char indicate_T[] = "Send Temperature";
