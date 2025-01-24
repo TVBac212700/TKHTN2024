@@ -252,6 +252,23 @@ void TaskTX()
 	}
 	memset((void*)send_to_rs485, 0, sizeof(send_to_rs485));
 }
+typedef struct {
+    void (*task_function)();   // Con trỏ tới hàm task
+    uint32_t period;           // Chu kỳ thực thi (ms)
+    uint32_t next_run;         // Thời gian thực thi tiếp theo (ms)
+} Task;
+
+// Bảng lịch
+Task task_list[] = {
+    {TaskMPR121, 200, 0},
+    {TaskTempBMP180, 5000, 0},      	// (*) thuc te la 60s, tuy nhien cho ve 5s de demo
+    {TaskPressBMP180, 5000, 0},         // (*) thuc te la 60s, tuy nhien cho ve 5s de demo
+    {TaskLCD, 1000, 0},
+	{TaskRX, 150,0},
+	{TaskTX, 1000,0}
+};
+
+const uint8_t NUM_TASKS = sizeof(task_list) / sizeof(Task);
 /* USER CODE END 0 */
 
 /**
@@ -295,7 +312,7 @@ int main(void)
   HD44780_SetCursor(0,0);
   HD44780_PrintStr("INIT LCD 1602");
 //  count_touch = 0;
-
+  uint32_t current_time = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -305,12 +322,18 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  TaskMPR121();
-	  TaskTempBMP180();
-	  TaskPressBMP180();
-	  TaskLCD();
-	  TaskRX();
-	  TaskTX();
+	  current_time = HAL_GetTick();  // Lấy thời gian hiện tại (ms)
+
+	  	         // Duyệt qua bảng lịch
+	  	         for (uint8_t i = 0; i < NUM_TASKS; i++) {
+	  	             if (current_time >= task_list[i].next_run) {
+	  	                 // Gọi hàm task
+	  	                 task_list[i].task_function();
+
+	  	                 // Cập nhật thời gian thực thi tiếp theo
+	  	                 task_list[i].next_run = current_time + task_list[i].period;
+	  	             }
+	  	         }
 
   }
   /* USER CODE END 3 */
