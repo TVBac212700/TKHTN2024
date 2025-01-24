@@ -84,7 +84,7 @@ UART_HandleTypeDef huart1;
 #define LCD_PM_T 1000
 
 #define IS_READY 1
-#define NOT_READY 1
+#define NOT_READY 0
 #define INT_MIN  0
 typedef void (*TaskFunction_t)(void);
 
