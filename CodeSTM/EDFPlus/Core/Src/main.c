@@ -84,7 +84,7 @@ UART_HandleTypeDef huart1;
 #define LCD_PM_T 1000
 
 #define IS_READY 1
-#define NOT_READY 1
+#define NOT_READY 0
 #define INT_MIN  0
 typedef void (*TaskFunction_t)(void);
 
@@ -396,13 +396,13 @@ int main(void)
 	  int Min_Dead_Line = 0, Dead_Line = 0;
 	  for(int i = 0; i < Num_tasks; i++)
 	  {
-		  Dead_Line = (TimeNow - ALL_TASK[i]->LastRun) - ALL_TASK[i]->T;
+		  Dead_Line = ALL_TASK[i]->LastRun - TimeNow + ALL_TASK[i]->T;
 		  if(Dead_Line < Min_Dead_Line)
 		  {
 			  Min_Dead_Line = Dead_Line;
 			  for(int k = 0; k < i; k++)
 			  {
-				  ALL_TASK[i]->Ready = NOT_READY;
+				  ALL_TASK[k]->Ready = NOT_READY;
 			  }
 			  ALL_TASK[i]->Ready = IS_READY;
 		  }
