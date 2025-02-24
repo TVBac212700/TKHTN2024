@@ -37,15 +37,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  000185eb  00000000  00000000  00019b23  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000e4b4  00000000  00000000  0003210e  2**0
+ 17 .debug_line   0000e3f7  00000000  00000000  0003210e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000874ce  00000000  00000000  000405c2  2**0
+ 18 .debug_str    000874ca  00000000  00000000  00040505  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000c7a90  2**0
+ 19 .comment      00000043  00000000  00000000  000c79cf  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  000041e0  00000000  00000000  000c7ad4  2**2
+ 20 .debug_frame  000041e0  00000000  00000000  000c7a14  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 0000005c  00000000  00000000  000cbcb4  2**0
+ 21 .debug_line_str 00000058  00000000  00000000  000cbbf4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -4174,18 +4174,18 @@ int main(void)
  8002204:	61bb      	str	r3, [r7, #24]
  8002206:	e02c      	b.n	8002262 <main+0xd2>
 	  {
-		  Dead_Line = (TimeNow - ALL_TASK[i]->LastRun) - ALL_TASK[i]->T;
+		  Dead_Line = ALL_TASK[i]->LastRun - TimeNow + ALL_TASK[i]->T;
  8002208:	4a2d      	ldr	r2, [pc, #180]	@ (80022c0 <main+0x130>)
  800220a:	69bb      	ldr	r3, [r7, #24]
  800220c:	f852 3023 	ldr.w	r3, [r2, r3, lsl #2]
- 8002210:	691b      	ldr	r3, [r3, #16]
- 8002212:	68fa      	ldr	r2, [r7, #12]
+ 8002210:	691a      	ldr	r2, [r3, #16]
+ 8002212:	68fb      	ldr	r3, [r7, #12]
  8002214:	1ad2      	subs	r2, r2, r3
  8002216:	492a      	ldr	r1, [pc, #168]	@ (80022c0 <main+0x130>)
  8002218:	69bb      	ldr	r3, [r7, #24]
  800221a:	f851 3023 	ldr.w	r3, [r1, r3, lsl #2]
  800221e:	689b      	ldr	r3, [r3, #8]
- 8002220:	1ad3      	subs	r3, r2, r3
+ 8002220:	4413      	add	r3, r2
  8002222:	607b      	str	r3, [r7, #4]
 		  if(Dead_Line < Min_Dead_Line)
  8002224:	687a      	ldr	r2, [r7, #4]
@@ -4201,11 +4201,11 @@ int main(void)
  8002232:	617b      	str	r3, [r7, #20]
  8002234:	e008      	b.n	8002248 <main+0xb8>
 			  {
-				  ALL_TASK[i]->Ready = NOT_READY;
+				  ALL_TASK[k]->Ready = NOT_READY;
  8002236:	4a22      	ldr	r2, [pc, #136]	@ (80022c0 <main+0x130>)
- 8002238:	69bb      	ldr	r3, [r7, #24]
+ 8002238:	697b      	ldr	r3, [r7, #20]
  800223a:	f852 3023 	ldr.w	r3, [r2, r3, lsl #2]
- 800223e:	2201      	movs	r2, #1
+ 800223e:	2200      	movs	r2, #0
  8002240:	60da      	str	r2, [r3, #12]
 			  for(int k = 0; k < i; k++)
  8002242:	697b      	ldr	r3, [r7, #20]
@@ -4255,7 +4255,7 @@ int main(void)
  800228a:	4a0d      	ldr	r2, [pc, #52]	@ (80022c0 <main+0x130>)
  800228c:	693b      	ldr	r3, [r7, #16]
  800228e:	f852 3023 	ldr.w	r3, [r2, r3, lsl #2]
- 8002292:	2201      	movs	r2, #1
+ 8002292:	2200      	movs	r2, #0
  8002294:	60da      	str	r2, [r3, #12]
 			  ALL_TASK[i]->LastRun = HAL_GetTick();
  8002296:	f000 fb7b 	bl	8002990 <HAL_GetTick>

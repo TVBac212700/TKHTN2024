@@ -60,8 +60,8 @@ all: main-build
 main-build: EDFPlus.elf secondary-outputs
 
 # Tool invocations
-EDFPlus.elf EDFPlus.map: $(OBJS) $(USER_OBJS) D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\EDFPlus\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "EDFPlus.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\TKHTN\TKHTN_2024\TKHTN2024\CodeSTM\EDFPlus\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EDFPlus.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+EDFPlus.elf EDFPlus.map: $(OBJS) $(USER_OBJS) D:\File\Project\TKHTN2024\CodeSTM\EDFPlus\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "EDFPlus.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\File\Project\TKHTN2024\CodeSTM\EDFPlus\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EDFPlus.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

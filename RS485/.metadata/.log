@@ -1,0 +1,30 @@
+!SESSION 2025-01-24 09:24:18.587 -----------------------------------------------
+eclipse.buildId=Version 1.17.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-01-24 09:24:49.630
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-01-24 09:24:49.634
+!MESSAGE Log4j2 initialized with config file D:\File\Project\TKHTN2024\RS485\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-01-24 09:24:54.837
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-01-24 09:25:42.654
+!MESSAGE Indexed 'EDFPlus' (22 sources, 116 headers) in 8.15 sec: 9,601 declarations; 43,456 references; 7 unresolved inclusions; 862 syntax errors; 1,304 unresolved names (2.4%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-01-24 09:26:05.353
+!MESSAGE Indexed 'MeasureTimeTask' (22 sources, 65 headers) in 3.57 sec: 7,399 declarations; 38,670 references; 21 unresolved inclusions; 861 syntax errors; 3,278 unresolved names (6.6%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-01-24 09:27:09.839
+!MESSAGE Indexed 'RMS' (36 sources, 140 headers) in 11.3 sec: 13,373 declarations; 69,959 references; 7 unresolved inclusions; 1,000 syntax errors; 1,400 unresolved names (1.7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-01-24 09:27:50.170
+!MESSAGE Indexed 'RoundRobin' (22 sources, 65 headers) in 4.22 sec: 7,405 declarations; 38,679 references; 21 unresolved inclusions; 861 syntax errors; 3,283 unresolved names (6.7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-01-24 09:28:32.211
+!MESSAGE Indexed 'TimeSlice' (22 sources, 115 headers) in 2.19 sec: 9,461 declarations; 45,323 references; 2 unresolved inclusions; 36 syntax errors; 188 unresolved names (0.34%)

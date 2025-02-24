@@ -232,7 +232,7 @@ int main(void)
   StringPrintHandle = osMessageCreate(osMessageQ(StringPrint), NULL);
 
   /* definition and creation of StringRS485 */
-  osMessageQDef(StringRS485, 510, 50);
+  osMessageQDef(StringRS485, 50, 50);
   StringRS485Handle = osMessageCreate(osMessageQ(StringRS485), NULL);
 
   /* USER CODE BEGIN RTOS_QUEUES */
