@@ -241,23 +241,23 @@ int main(void)
 
   /* Create the thread(s) */
   /* definition and creation of RXUARTTask */
-  osThreadDef(RXUARTTask, RX_Task, osPriorityAboveNormal, 0, 512);
+  osThreadDef(RXUARTTask, RX_Task, osPriorityRealtime, 0, 512);
   RXUARTTaskHandle = osThreadCreate(osThread(RXUARTTask), NULL);
 
   /* definition and creation of LCD */
-  osThreadDef(LCD, LCD_Task, osPriorityHigh, 0, 512);
+  osThreadDef(LCD, LCD_Task, osPriorityAboveNormal, 0, 512);
   LCDHandle = osThreadCreate(osThread(LCD), NULL);
 
   /* definition and creation of ReadTempTask */
-  osThreadDef(ReadTempTask, Temp_Task, osPriorityNormal, 0, 256);
+  osThreadDef(ReadTempTask, Temp_Task, osPriorityBelowNormal, 0, 256);
   ReadTempTaskHandle = osThreadCreate(osThread(ReadTempTask), NULL);
 
   /* definition and creation of ReadPressTask */
-  osThreadDef(ReadPressTask, Press_Task, osPriorityNormal, 0, 256);
+  osThreadDef(ReadPressTask, Press_Task, osPriorityBelowNormal, 0, 256);
   ReadPressTaskHandle = osThreadCreate(osThread(ReadPressTask), NULL);
 
   /* definition and creation of KeyTask */
-  osThreadDef(KeyTask, Key_Task, osPriorityRealtime, 0, 512);
+  osThreadDef(KeyTask, Key_Task, osPriorityHigh, 0, 512);
   KeyTaskHandle = osThreadCreate(osThread(KeyTask), NULL);
 
   /* definition and creation of TXUARTTask */
@@ -547,7 +547,7 @@ void RX_Task(void const * argument)
 				  {
 					  for(int i = 0; i < 5; i++)
 					  {
-						  for (int j = 0; j < 2; j++)
+						  for (int j = 0; j < 3; j++)
 						  {
 							  ALL_TASK[i][j] = DF_ALL_TASK[i][j];
 						  }
